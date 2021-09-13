@@ -1,0 +1,1 @@
+Manifest: https://raw.githubusercontent.com/marcoswalker/xaura-module/master/module.json
