@@ -19,16 +19,6 @@ Hooks.once('diceSoNiceReady', function (dice) {
       system: game.system.id
     });
     dice.addDicePreset({
-        type: 'd4',
-        labels: [
-          '1',
-          '2',
-          '3',
-          'modules/xaura-module/assets/logodice.png'
-        ],
-        system: game.system.id
-    });
-    dice.addDicePreset({
         type: 'd6',
         labels: [
           '1',
