@@ -123,7 +123,7 @@ Hooks.once('diceSoNiceReady', function (dice) {
       outline: '#ff0000',
       edge: '#ff0000', 
       texture: 'metal',
-      material: 'chrome',
+      material: 'metal',
       font: 'Didot',
       default: true,
     });
