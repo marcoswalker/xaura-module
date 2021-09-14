@@ -22,7 +22,7 @@
         "dnd5e"
     ],
     "styles": [
-
+        "style/style.css"
     ],
     "url": "https://github.com/marcoswalker/xaura-module",
     "manifest": "https://raw.githubusercontent.com/marcoswalker/xaura-module/master/module.json",

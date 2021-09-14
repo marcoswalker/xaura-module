@@ -474,6 +474,101 @@ export function diceConfig(dice) {
       ],
       system: "Monge"
     });
+    dice.addSystem({ id: "PactOfDragons", name: "Pact Of Dragons"}, false);
+    dice.addDicePreset({
+      type: 'd2',
+      labels: [
+        '1',
+        'modules/xaura-module/assets/PODdice.png'
+      ],
+      system: "PactOfDragons"
+    });
+    dice.addDicePreset({
+        type: 'd6',
+        labels: [
+          '1',
+          '2',
+          '3',
+          '4',
+          '5',
+          'modules/xaura-module/assets/PODdice.png'
+        ],
+        system: "PactOfDragons"
+    });
+    dice.addDicePreset({
+        type: 'd8',
+        labels: [
+          '1',
+          '2',
+          '3',
+          '4',
+          '5',
+          '6',
+          '7',
+          'modules/xaura-module/assets/PODdice.png'
+        ],
+        system: "PactOfDragons"
+    });
+    dice.addDicePreset({
+      type: 'd10',
+      labels: [
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        'modules/xaura-module/assets/PODdice.png'
+      ],
+      system: "PactOfDragons"
+    });
+    dice.addDicePreset({
+        type: 'd12',
+        labels: [
+          '1',
+          '2',
+          '3',
+          '4',
+          '5',
+          '6',
+          '7',
+          '8',
+          '9',
+          '10',
+          '11',
+          'modules/xaura-module/assets/PODdice.png',
+        ],
+        system: "PactOfDragons"
+    });
+    dice.addDicePreset({
+      type: 'd20',
+      labels: [
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        '11',
+        '12',
+        '13',
+        '14',
+        '15',
+        '16',
+        '17',
+        '18',
+        '19',
+        'modules/xaura-module/assets/PODdice.png',
+      ],
+      system: "PactOfDragons"
+    });
     dice.addColorset({
       name: game.system.id,
       description: ' * DnD5E * ',
@@ -484,7 +579,7 @@ export function diceConfig(dice) {
       edge: '#ff0000', 
       texture: 'metal',
       material: 'metal',
-      font: 'Didot',
+      font: 'MagicSchool',
       default: true,
     });
     dice.addColorset({
@@ -497,7 +592,7 @@ export function diceConfig(dice) {
       edge: '#79a3f7', 
       texture: 'wood',
       material: 'wood',
-      font: 'Luminari',
+      font: 'Wings_of_Darkness',
       default: false,
     });
     dice.addColorset({
@@ -510,7 +605,7 @@ export function diceConfig(dice) {
       edge: '#efdc58', 
       texture: 'radial',
       material: 'metal',
-      font: 'Courier',
+      font: 'Sectar',
       default: false,
     });
     dice.addColorset({
@@ -523,7 +618,7 @@ export function diceConfig(dice) {
       edge: '#4101d5', 
       texture: 'metal',
       material: 'metal',
-      font: 'Arial',
+      font: 'BramblePrincess',
       default: false,
     });
     dice.addColorset({
@@ -536,7 +631,7 @@ export function diceConfig(dice) {
       edge: '#ffffff', 
       texture: 'skulls',
       material: 'plastic',
-      font: 'Didot',
+      font: 'Heroes',
       default: false,
     });
 }

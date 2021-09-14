@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "MagicSchool";
+    src: url('../fonts/MagicSchool.ttf');
+}
+
+@font-face {
+    font-family: "BramblePrincess";
+    src: url("../fonts/BramblePrincess.ttf");
+}
+
+@font-face {
+    font-family: "Sectar";
+    src: url("../fonts/Sectar.otf");
+}
+
+@font-face {
+    font-family: "Heroes";
+    src: url("../fonts/Heroes.ttf");
+}
+
+@font-face {
+    font-family: "Wings_of_Darkness";
+    src: url("../fonts/Wings_of_Darkness.ttf");
+}
