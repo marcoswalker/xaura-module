@@ -18,11 +18,11 @@ Hooks.on("getSceneControlButtons", (controls) => {
   const bar = controls.find(c => c.name === "token");
   if (!game.user.isGM) {
     bar.tools.push({
-        name: "Centralizar Canvas no Token",
-        icon: "fas fa-anchor",
-        title: "Centralizar Canvas no Token",
-        onClick: async () => centralizaToken(),
-        button: true
+      name: "Centralizar Canvas no Token",
+      icon: "fas fa-anchor",
+      title: "Centralizar Canvas no Token",
+      onClick: async () => centralizaToken(),
+      button: true
     });
   }
 });
