@@ -8,6 +8,8 @@ Hooks.once("init", function () {
 
 Hooks.once('ready', function () {
   $('#logo').attr('src', '/modules/xaura-module/assets/DD_TOP.png');
+  $('#pause img').attr('src', "/modules/xaura-module/assets/pause.png");
+  ui['pause']['options']['template'] = "/modules/xaura-module/templates/pause.html";
 });
 
 Hooks.once('diceSoNiceReady', function (dice) {
