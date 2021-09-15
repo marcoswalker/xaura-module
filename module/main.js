@@ -16,6 +16,10 @@ Hooks.once('diceSoNiceReady', function (dice) {
   diceConfig(dice);
 });
 
+Hooks.on('pauseGame', function (paused) {
+  if (paused) AudioHelper.play({src: "modules/xaura-module/assets/pause.wav", volume: 1.0, loop: false}, true);
+});
+
 Hooks.on("getSceneControlButtons", (controls) => {
   const bar = controls.find(c => c.name === "token");
   if (!game.user.isGM) {
