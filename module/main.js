@@ -1,15 +1,18 @@
 import { diceConfig } from "./diceConfig.js";
 
+let pause_sound;
+
 Hooks.once("init", function () {
   const midiQOL = game.modules.get('midi-qol');
   let ptbr = midiQOL.languages.find(a => a.lang == "pt-BR");
-  ptbr['path'] = "modules/xaura-module/midi-lang/pt-BR.json";
+  ptbr['path'] = "/modules/xaura-module/midi-lang/pt-BR.json";
 });
 
-Hooks.once('ready', function () {
+Hooks.once('ready', async function () {
   $('#logo').attr('src', '/modules/xaura-module/assets/DD_TOP.png');
   $('#pause img').attr('src', "/modules/xaura-module/assets/pause.png");
   ui['pause']['options']['template'] = "/modules/xaura-module/templates/pause.html";
+  pause_sound = await AudioHelper.preloadSound("/modules/xaura-module/assets/pause.wav");
 });
 
 Hooks.once('diceSoNiceReady', function (dice) {
@@ -17,7 +20,7 @@ Hooks.once('diceSoNiceReady', function (dice) {
 });
 
 Hooks.on('pauseGame', function (paused) {
-  if (paused) AudioHelper.play({src: "modules/xaura-module/assets/pause.wav", volume: 1.0, loop: false}, true);
+  if (paused) pause_sound.play({volume:1.0,loop:false}, true);
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {
