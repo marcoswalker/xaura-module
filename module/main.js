@@ -20,7 +20,7 @@ Hooks.once('diceSoNiceReady', function (dice) {
 });
 
 Hooks.on('pauseGame', function (paused) {
-  if (paused) pause_sound.play({volume:1.0,loop:false}, true);
+  if (paused) pause_sound.play({volume:1.0,loop:false}, false);
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {
