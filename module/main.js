@@ -1,4 +1,5 @@
 import { diceConfig } from "./diceConfig.js";
+import {SystemSettings} from "./settings.js";
 
 let pause_sound;
 
@@ -6,6 +7,7 @@ Hooks.once("init", function () {
   const midiQOL = game.modules.get('midi-qol');
   let ptbr = midiQOL.languages.find(a => a.lang == "pt-BR");
   ptbr['path'] = "/modules/xaura-module/midi-lang/pt-BR.json";
+  SystemSettings();
 });
 
 Hooks.once('ready', async function () {
@@ -13,6 +15,26 @@ Hooks.once('ready', async function () {
   $('#pause img').attr('src', "/modules/xaura-module/assets/pause.png");
   ui['pause']['options']['template'] = "/modules/xaura-module/templates/pause.html";
   pause_sound = await AudioHelper.preloadSound("/modules/xaura-module/assets/pause.wav");
+  if (game.settings.get("xaura-module", "OcultarMacros")) {
+    $('#hotbar').addClass('esconde');
+  } else {
+    $('#hotbar').removeClass('esconde');
+  }
+  if (game.settings.get("xaura-module", "OcultarPlayers")) {
+    $('#players').addClass('esconde');
+  } else {
+    $('#players').removeClass('esconde');
+  }
+  let ocultos = false;
+  $('#logo').click(function () {
+    if (!ocultos) {
+      $('#controls').addClass('esconde');
+      ocultos = true;
+    } else {
+      $('#controls').removeClass('esconde');
+      ocultos = false;
+    }
+  });
 });
 
 Hooks.once('diceSoNiceReady', function (dice) {
