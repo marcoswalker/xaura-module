@@ -2,6 +2,7 @@ import { diceConfig } from "./diceConfig.js";
 import {SystemSettings} from "./settings.js";
 
 let pause_sound;
+let ocultos = false;
 
 Hooks.once("init", function () {
   const midiQOL = game.modules.get('midi-qol');
@@ -15,28 +16,45 @@ Hooks.once('ready', async function () {
   $('#pause img').attr('src', "/modules/xaura-module/assets/pause.png");
   ui['pause']['options']['template'] = "/modules/xaura-module/templates/pause.html";
   pause_sound = await AudioHelper.preloadSound("/modules/xaura-module/assets/pause.wav");
-  if (game.settings.get("xaura-module", "OcultarMacros")) {
-    $('#hotbar').addClass('esconde');
-  } else {
-    $('#hotbar').removeClass('esconde');
-  }
-  if (game.settings.get("xaura-module", "OcultarPlayers")) {
-    $('#players').addClass('esconde');
-  } else {
-    $('#players').removeClass('esconde');
-  }
-  let ocultos = false;
   $('#logo').click(function () {
     if (!ocultos) {
       $('#controls').addClass('esconde');
       $('#navigation').addClass('esconde');
+      $('#hotbar').addClass('esconde');
+      $('#players').addClass('esconde');
       ocultos = true;
     } else {
       $('#controls').removeClass('esconde');
       $('#navigation').removeClass('esconde');
+      $('#players').removeClass('esconde');
+      $('#hotbar').removeClass('esconde');
       ocultos = false;
     }
   });  
+});
+
+Hooks.on('renderPlayerList', function () {
+  if (ocultos) {
+    $('#players').addClass('esconde');
+  } else {
+    $('#players').removeClass('esconde');
+  }
+});
+
+Hooks.on('renderSceneNavigation', function () {
+  if (ocultos) {
+    $('#navigation').addClass('esconde');
+  } else {
+    $('#navigation').removeClass('esconde');
+  }
+});
+
+Hooks.on('renderSceneControls', function () {
+  if (ocultos) {
+    $('#controls').addClass('esconde');
+  } else {
+    $('#controls').removeClass('esconde');
+  }
 });
 
 Hooks.on('renderActorSheet', function(document, html) {
