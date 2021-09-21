@@ -44,3 +44,9 @@
 .esconde {
     display: none !important;
 }
+
+.fundoFicha {
+    background-image: url("/modules/xaura-module/assets/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

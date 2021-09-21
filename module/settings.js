@@ -17,4 +17,13 @@ export const SystemSettings = function() {
         type: Boolean,
         onChange: () => {location.reload();}
     });
+    game.settings.register("xaura-module", "FundoFicha", {
+        name: "Usar imagem de fundo da ficha.",
+        hint: "Selecione para usar imagem de fundo das fichas.",
+        scope: "client",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: () => {location.reload();}
+    });
 }

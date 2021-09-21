@@ -34,7 +34,15 @@ Hooks.once('ready', async function () {
       $('#controls').removeClass('esconde');
       ocultos = false;
     }
-  });
+  });  
+});
+
+Hooks.on('renderActorSheet', function(document, html) {
+  const setting = game.settings.get('xaura-module', 'FundoFicha');
+  if (setting) {
+    $(`#actor-${document.actor.id}`).addClass('fundoFicha');
+    $(`#actor-${document.actor.id} section`).css('background','none');
+  }
 });
 
 Hooks.once('diceSoNiceReady', function (dice) {
@@ -42,7 +50,7 @@ Hooks.once('diceSoNiceReady', function (dice) {
 });
 
 Hooks.on('pauseGame', function (paused) {
-  if (paused) pause_sound.play({volume:1.0,loop:false}, false);
+  if (paused) pause_sound.play({ volume:1.0, loop:false}, false);
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {
