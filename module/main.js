@@ -38,6 +38,7 @@ Hooks.once('ready', async function () {
 });
 
 Hooks.on('renderActorSheet', function(document, html) {
+  if (document.actor.data.type != "character") return;
   const setting = game.settings.get('xaura-module', 'FundoFicha');
   if (setting) {
     $(`#actor-${document.actor.id}`).addClass('fundoFicha');
