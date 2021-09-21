@@ -29,9 +29,11 @@ Hooks.once('ready', async function () {
   $('#logo').click(function () {
     if (!ocultos) {
       $('#controls').addClass('esconde');
+      $('#navigation').addClass('esconde');
       ocultos = true;
     } else {
       $('#controls').removeClass('esconde');
+      $('#navigation').removeClass('esconde');
       ocultos = false;
     }
   });  
@@ -39,15 +41,14 @@ Hooks.once('ready', async function () {
 
 Hooks.on('renderActorSheet', function(document, html) {
   if (document.actor.data.type != "character") return;
-  const setting = game.settings.get('xaura-module', 'FundoFicha');
-  if (setting) {
+  if (game.settings.get('xaura-module', 'FundoFicha')) {
     $(`#actor-${document.actor.id}`).addClass('fundoFicha');
     $(`#actor-${document.actor.id} section`).css('background','none');
   }
   if (game.settings.get('xaura-module', 'EscondeLogo')) {
-    $('#ddbImporterButton').addClass('esconde')
+    $('#ddbImporterButton').addClass('esconde');
   } else {
-    $('#ddbImporterButton').removeClass('esconde')
+    $('#ddbImporterButton').removeClass('esconde');
   }
 });
 
