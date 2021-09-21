@@ -26,4 +26,13 @@ export const SystemSettings = function() {
         type: Boolean,
         onChange: () => {location.reload();}
     });
+    game.settings.register("xaura-module", "EscondeLogo", {
+        name: "Esconder logo Beyond da ficha.",
+        hint: "Esconder logo módulo My Beyound das fichas.",
+        scope: "client",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: () => {location.reload();}
+    });
 }

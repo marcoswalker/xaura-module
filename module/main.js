@@ -43,6 +43,11 @@ Hooks.on('renderActorSheet', function(document, html) {
     $(`#actor-${document.actor.id}`).addClass('fundoFicha');
     $(`#actor-${document.actor.id} section`).css('background','none');
   }
+  if (game.settings.get('xaura-module', 'EscondeLogo')) {
+    $('#ddbImporterButton').addClass('esconde')
+  } else {
+    $('#ddbImporterButton').removeClass('esconde')
+  }
 });
 
 Hooks.once('diceSoNiceReady', function (dice) {
