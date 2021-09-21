@@ -65,8 +65,6 @@ Hooks.on('renderActorSheet', function(document, html) {
   }
   if (game.settings.get('xaura-module', 'EscondeLogo')) {
     $('#ddbImporterButton').addClass('esconde');
-  } else {
-    $('#ddbImporterButton').removeClass('esconde');
   }
 });
 
@@ -74,9 +72,7 @@ Hooks.on('renderSidebar', function () {
   if (game.settings.get('xaura-module', 'FundoChat')) {
     $('#sidebar').attr('style', 'background-size: auto 100vh !important;');
     $('#sidebar').addClass('fundoFolha');
-  } else {
-    $('#sidebar').removeClass('fundoFolha');
-  }
+  } 
 });
 
 Hooks.once('diceSoNiceReady', function (dice) {
