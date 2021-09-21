@@ -50,3 +50,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.fundoFolha {
+    background-image: url("/modules/xaura-module/assets/folha.jpg");
+    border-image-source: url('/modules/xaura-module/assets/panel1.png') !important;
+    color: #000000;
+}

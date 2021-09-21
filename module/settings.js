@@ -17,4 +17,13 @@ export const SystemSettings = function() {
         type: Boolean,
         onChange: () => {location.reload();}
     });
+    game.settings.register("xaura-module", "FundoChat", {
+        name: "Usar imagem de fundo no Chat.",
+        hint: "Selecione para usar imagem de fundo no Chat.",
+        scope: "client",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: () => {location.reload();}
+    });
 }
