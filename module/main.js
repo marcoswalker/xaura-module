@@ -175,14 +175,14 @@ Hooks.on('midi-qol.RollComplete', function (workflow) {
     let token = Array.from(workflow.targets).find(d => d.actor.id == damage.actorId);
     if (token.actor.data.type == "character") {
       chatContent += `<tr>
-        <td>${token.data.name}</td>
+        <td>${token.actor.data.name}</td>
         <td style="text-align:center;">${damage.oldHP}</td>
         <td style="text-align:center;">${damage.appliedDamage}</td>
         <td>${game.i18n.translations.DND5E['Damage'+damageType]}</td>
       </tr>`;
     } else {
       chatContent += `<tr>
-        <td>${token.data.name}</td>
+        <td>${token.actor.data.name}</td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;">${damage.appliedDamage}</td>
         <td>${game.i18n.translations.DND5E['Damage'+damageType]}</td>
