@@ -158,3 +158,46 @@ Hooks.on("renderCombatTracker",function (combatTracker, html) {
     });
   }
 });
+
+Hooks.on('midi-qol.RollComplete', function (workflow) {
+  if (!workflow.damageList) return;
+  let users = [];
+  let chatContent = `<table>
+    <tr>
+      <th>Target</th>
+      <th>HP Antes</th>
+      <th>Dano</th>
+      <th>Tipo</th>
+    </tr>`;
+  for (let damage of workflow.damageList) {
+    let damageDetail = workflow.damageDetail[0];
+    let damageType = damageDetail.type.charAt(0).toUpperCase() + damageDetail.type.slice(1);
+    let token = Array.from(workflow.targets).find(d => d.actor.id == damage.actorId);
+    if (token.actor.data.type == "character") {
+      chatContent += `<tr>
+        <td>${token.data.name}</td>
+        <td style="text-align:center;">${damage.oldHP}</td>
+        <td style="text-align:center;">${damage.appliedDamage}</td>
+        <td>${game.i18n.translations.DND5E['Damage'+damageType]}</td>
+      </tr>`;
+    } else {
+      chatContent += `<tr>
+        <td>${token.data.name}</td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;">${damage.appliedDamage}</td>
+        <td>${game.i18n.translations.DND5E['Damage'+damageType]}</td>
+      </tr>`;
+    }
+    for (let user of game.users) {
+      if (token.actor.testUserPermission(user, 'ENTITY_PERMISSIONS.OWNER') || workflow.actor.testUserPermission(user, 'ENTITY_PERMISSIONS.OWNER')) {
+        users.push(user.id);
+      }
+    }
+  }
+  chatContent += `</table>`;
+  ChatMessage.create({
+    whisper: users,
+    content: chatContent,
+    speaker: ChatMessage.getSpeaker({ actor: workflow.actor })
+  });
+});
