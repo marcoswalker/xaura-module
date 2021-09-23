@@ -31,11 +31,6 @@ Hooks.once('ready', async function () {
       ocultos = false;
     }
   });  
-  if (game.user.data.name == "Pirata") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "PactOfDragons"}});
-  if (game.user.data.name == "Daniel") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "Guerreiro"}});
-  if (game.user.data.name == "Vinicius") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "Clerigo"}});
-  if (game.user.data.name == "Xandão") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "Bardo"}});
-  if (game.user.data.name == "Xaura") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "Monge"}});
 });
 
 Hooks.on('renderPlayerList', function () {
@@ -82,6 +77,12 @@ Hooks.on('renderSidebar', function () {
 
 Hooks.once('diceSoNiceReady', function (dice) {
   diceConfig(dice);
+  if (game.user.data.name == "Pirata") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "PactOfDragons"}});
+  if (game.user.data.name == "Daniel") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Guerreiro"}});
+  if (game.user.data.name == "Vinicius") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Clerigo"}});
+  if (game.user.data.name == "Xandão") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Bardo"}});
+  if (game.user.data.name == "Xaura") game.user.setFlag('dice-so-nice', 'appearance', { "global": {"labelColor": "#ff0000", "diceColor": "#000000",
+    "outlineColor": "#ffffff", "edgeColor": "#ff0000", "texture": "metal", "material": "metal", "font": "MagicSchool", "colorset": "custom", "system": "Monge"} });
 });
 
 Hooks.on('pauseGame', function (paused) {
@@ -178,19 +179,21 @@ Hooks.on('midi-qol.RollComplete', function (workflow) {
     let damageDetail = workflow.damageDetail[0];
     let damageType = damageDetail.type.charAt(0).toUpperCase() + damageDetail.type.slice(1);
     let token = Array.from(workflow.targets).find(d => d.actor.id == damage.actorId);
+    let translationText = 'Damage'+damageType;
+    if (damageType == "Healing") translationText = damageType;
     if (token.actor.data.type == "character") {
       chatContent += `<tr>
         <td>${token.actor.data.name}</td>
         <td style="text-align:center;">${damage.oldHP}</td>
         <td style="text-align:center;">${damage.appliedDamage}</td>
-        <td>${game.i18n.translations.DND5E['Damage'+damageType]}</td>
+        <td>${game.i18n.translations.DND5E[translationText]}</td>
       </tr>`;
     } else {
       chatContent += `<tr>
         <td>${token.actor.data.name}</td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;">${damage.appliedDamage}</td>
-        <td>${game.i18n.translations.DND5E['Damage'+damageType]}</td>
+        <td>${game.i18n.translations.DND5E[translationText]}</td>
       </tr>`;
     }
     for (let user of game.users) {
