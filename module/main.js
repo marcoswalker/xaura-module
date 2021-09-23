@@ -31,6 +31,11 @@ Hooks.once('ready', async function () {
       ocultos = false;
     }
   });  
+  if (game.user.data.name == "Pirata") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "PactOfDragons"}});
+  if (game.user.data.name == "Daniel") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "Guerreiro"}});
+  if (game.user.data.name == "Vinicius") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "Clerigo"}});
+  if (game.user.data.name == "Xandão") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "Bardo"}});
+  if (game.user.data.name == "Xaura") game.user.setFlag('dice-so-nice', 'appearance', {global: {system: "Monge"}});
 });
 
 Hooks.on('renderPlayerList', function () {
