@@ -113,6 +113,7 @@ async function centralizaToken () {
 }
 
 Hooks.on("renderCombatTracker",function (combatTracker, html) {
+  if (!combatTracker.options.popOut && combatTracker.combats.length > 0) combatTracker.renderPopout();
   if (!game.user.isGM) return;
   const combats = combatTracker.combats;
   if (combats.length > 0) {
