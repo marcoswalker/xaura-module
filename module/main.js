@@ -209,3 +209,9 @@ Hooks.on('midi-qol.RollComplete', function (workflow) {
     speaker: ChatMessage.getSpeaker({ actor: workflow.actor })
   });
 });
+
+Hooks.on('renderChatMessage', function(chatMessage, html, messageData) {
+  if (!game.settings.get('xaura-module', 'FundoChat')) return;
+  $(html[0]).attr('style', 'background: none !important');
+  $(html.find('.message-content')).attr('style', 'background: none !important');
+});
