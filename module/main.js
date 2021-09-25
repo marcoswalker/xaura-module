@@ -185,7 +185,7 @@ Hooks.on('midi-qol.RollComplete', function (workflow) {
     if (token.actor.data.type == "character") {
       chatContent += `<tr>
         <td>${token.actor.data.name}</td>
-        <td style="text-align:center;">${damage.oldHP}</td>
+        <td style="text-align:center;">${damage.oldHP + damage.oldTempHP}</td>
         <td style="text-align:center;">${damage.appliedDamage}</td>
         <td>${game.i18n.translations.DND5E[translationText]}</td>
       </tr>`;
