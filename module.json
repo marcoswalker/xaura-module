@@ -2,7 +2,7 @@
     "name": "xaura-module",
     "title": "Módulo do Xaura",
     "description": "Melhorias do Xaura para DnD5E.",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "minimumCoreVersion": "0.8.9",
     "compatibleCoreVersion": "0.8.9",
     "author": "Marcos Walker (Xaura)",
@@ -13,7 +13,8 @@
 		}
 	],
     "esmodules": [
-        "module/main.js"
+        "module/main.js",
+        "module/trade.js"
     ],
     "scripts": [
         
@@ -24,6 +25,7 @@
     "styles": [
         "style/style.css"
     ],
+    "socket": true,
     "url": "https://github.com/marcoswalker/xaura-module",
     "manifest": "https://raw.githubusercontent.com/marcoswalker/xaura-module/master/module.json",
     "download": "https://codeload.github.com/marcoswalker/xaura-module/zip/master"
