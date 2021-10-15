@@ -166,8 +166,10 @@ Hooks.on("renderCombatTracker",function (combatTracker, html) {
   }
 });
 
-Hooks.on('midi-qol.RollComplete', function (workflow) {
-  if (!workflow.damageList) return;
+/*Hooks.on('midi-qol.DamageRollComplete', async function (workflow) {
+  //.log(typeof(workflow.damageList));
+  //if (!workflow.hasOwnProperty('damageList')) return;
+  console.log(workflow);
   let users = [];
   let chatContent = `<table>
     <tr>
@@ -204,12 +206,14 @@ Hooks.on('midi-qol.RollComplete', function (workflow) {
     }
   }
   chatContent += `</table>`;
-  ChatMessage.create({
+  console.log(users);
+  console.log(chatContent);
+  await ChatMessage.create({
     whisper: users,
     content: chatContent,
     speaker: ChatMessage.getSpeaker({ actor: workflow.actor })
   });
-});
+});*/
 
 Hooks.on('renderChatMessage', function(chatMessage, html, messageData) {
   if (!game.settings.get('xaura-module', 'FundoChat')) return;
