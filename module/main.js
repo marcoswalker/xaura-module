@@ -166,55 +166,6 @@ Hooks.on("renderCombatTracker",function (combatTracker, html) {
   }
 });
 
-/*Hooks.on('midi-qol.DamageRollComplete', async function (workflow) {
-  //.log(typeof(workflow.damageList));
-  //if (!workflow.hasOwnProperty('damageList')) return;
-  console.log(workflow);
-  let users = [];
-  let chatContent = `<table>
-    <tr>
-      <th>Target</th>
-      <th>HP Antes</th>
-      <th>Dano</th>
-      <th>Tipo</th>
-    </tr>`;
-  for (let damage of workflow.damageList) {
-    let damageDetail = workflow.damageDetail[0];
-    let damageType = damageDetail.type.charAt(0).toUpperCase() + damageDetail.type.slice(1);
-    let token = Array.from(workflow.targets).find(d => d.actor.id == damage.actorId);
-    let translationText = 'Damage'+damageType;
-    if (damageType == "Healing") translationText = damageType;
-    if (token.actor.data.type == "character") {
-      chatContent += `<tr>
-        <td>${token.actor.data.name}</td>
-        <td style="text-align:center;">${damage.oldHP + damage.oldTempHP}</td>
-        <td style="text-align:center;">${damage.appliedDamage}</td>
-        <td>${game.i18n.translations.DND5E[translationText]}</td>
-      </tr>`;
-    } else {
-      chatContent += `<tr>
-        <td>${token.actor.data.name}</td>
-        <td style="text-align:center;"></td>
-        <td style="text-align:center;">${damage.appliedDamage}</td>
-        <td>${game.i18n.translations.DND5E[translationText]}</td>
-      </tr>`;
-    }
-    for (let user of game.users) {
-      if (token.actor.testUserPermission(user, 'ENTITY_PERMISSIONS.OWNER') || workflow.actor.testUserPermission(user, 'ENTITY_PERMISSIONS.OWNER')) {
-        users.push(user.id);
-      }
-    }
-  }
-  chatContent += `</table>`;
-  console.log(users);
-  console.log(chatContent);
-  await ChatMessage.create({
-    whisper: users,
-    content: chatContent,
-    speaker: ChatMessage.getSpeaker({ actor: workflow.actor })
-  });
-});*/
-
 Hooks.on('renderChatMessage', function(chatMessage, html, messageData) {
   if (!game.settings.get('xaura-module', 'FundoChat')) return;
   $(html[0]).attr('style', 'background: none !important');
