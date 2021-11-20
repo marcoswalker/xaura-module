@@ -4,7 +4,7 @@ export const SystemSettings = function() {
         hint: "Selecione para usar imagem de fundo na ficha.",
         scope: "client",
         config: true,
-        default: false,
+        default: true,
         type: Boolean,
         onChange: () => {location.reload();}
     });
@@ -13,7 +13,7 @@ export const SystemSettings = function() {
         hint: "Selecione para usar imagem de fundo no Chat.",
         scope: "client",
         config: true,
-        default: false,
+        default: true,
         type: Boolean,
         onChange: () => {location.reload();}
     });
@@ -22,7 +22,7 @@ export const SystemSettings = function() {
         hint: "Esconder logo do módulo D&D Beyound na ficha.",
         scope: "client",
         config: true,
-        default: false,
+        default: true,
         type: Boolean,
         onChange: () => {location.reload();}
     });
