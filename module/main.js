@@ -81,6 +81,7 @@ Hooks.once('diceSoNiceReady', function (dice) {
   if (game.user.data.name == "Daniel") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Guerreiro"}});
   if (game.user.data.name == "Vinicius") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Clerigo"}});
   if (game.user.data.name == "Xandão") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Bardo"}});
+  if (game.user.data.name.toLowerCase() == "marcelo") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Bruxo"}});
   if (game.user.data.name == "Xaura") game.user.setFlag('dice-so-nice', 'appearance', { "global": {"labelColor": "#ff0000", "diceColor": "#000000",
     "outlineColor": "#ffffff", "edgeColor": "#ff0000", "texture": "metal", "material": "metal", "font": "MagicSchool", "colorset": "custom", "system": "Monge"} });
 });
