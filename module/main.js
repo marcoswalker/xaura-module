@@ -1,7 +1,6 @@
 import { diceConfig } from "./diceConfig.js";
 import {SystemSettings} from "./settings.js";
 
-let pause_sound;
 let ocultos = false;
 
 Hooks.once("init", function () {
@@ -15,7 +14,7 @@ Hooks.once('ready', async function () {
   $('#logo').attr('src', '/modules/xaura-module/assets/DD_TOP.png');
   $('#pause img').attr('src', "/modules/xaura-module/assets/pause.png");
   ui['pause']['options']['template'] = "/modules/xaura-module/templates/pause.html";
-  pause_sound = await AudioHelper.preloadSound("/modules/xaura-module/assets/pause.wav");
+  await game.audio.preload("/modules/xaura-module/assets/pause.wav");
   $('#logo').click(function () {
     if (!ocultos) {
       $('#controls').addClass('esconde');
@@ -87,7 +86,7 @@ Hooks.once('diceSoNiceReady', function (dice) {
 });
 
 Hooks.on('pauseGame', function (paused) {
-  if (paused) pause_sound.play({ volume:1.0, loop:false}, false);
+  if (paused) game.audio.sounds.get("/modules/xaura-module/assets/pause.wav").play({ volume:1.0, loop:false}, false); // TypeError: Cannot read property 'play' of undefined (Arrumado para versão 9)
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {
