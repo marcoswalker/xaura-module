@@ -112,8 +112,8 @@ Hooks.on("getSceneControlButtons", (controls) => {
 async function user_messages() {
   const messages = game.messages.filter(b => b.user.id == game.user.id);
   let dialog = new Dialog({
-    title: "Chat Messages",
-    content: "<ol id='user_messages' style='width: 100%; padding-left: 5px; padding-right: 5px;'></ol>",
+    title: `Mensagens do ${game.user.name}`,
+    content: "<ol id='user_messages' style='width: 100%; padding-left: 5px; padding-right: 5px; background-color: none;'></ol>",
     buttons: {},
     render: async (html) => {
       for (let mess of messages) {
@@ -121,7 +121,7 @@ async function user_messages() {
         $(html.find("#user_messages")).append($(mess_html));
       }
     }
-  },{height: 800, width: 400});
+  },{height: 800, width: 400, popOut: true, classes: ["mensagensDialog"]});
   dialog.render(true);
 }
 
