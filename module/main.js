@@ -3,12 +3,12 @@ import {SystemSettings} from "./settings.js";
 
 let ocultos = false;
 
-Hooks.once("init", async function () {
-  await game.audio.preload("/modules/xaura-module/assets/pause.wav");
+Hooks.once("init", function () { 
   const midiQOL = game.modules.get('midi-qol');
   let ptbr = midiQOL.languages.find(a => a.lang == "pt-BR");
   ptbr['path'] = "/modules/xaura-module/midi-lang/pt-BR.json";
   SystemSettings();
+  game.audio.preload("/modules/xaura-module/assets/pause.wav");
 });
 
 Hooks.once('ready', function () {
