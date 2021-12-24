@@ -3,7 +3,7 @@ import {SystemSettings} from "./settings.js";
 
 let ocultos = false;
 
-Hooks.once("init", function () {
+Hooks.once("init", async function () {
   await game.audio.preload("/modules/xaura-module/assets/pause.wav");
   const midiQOL = game.modules.get('midi-qol');
   let ptbr = midiQOL.languages.find(a => a.lang == "pt-BR");
@@ -11,7 +11,7 @@ Hooks.once("init", function () {
   SystemSettings();
 });
 
-Hooks.once('ready', async function () {
+Hooks.once('ready', function () {
   $('#logo').attr('src', '/modules/xaura-module/assets/DD_TOP.png');
   $('#pause img').attr('src', "/modules/xaura-module/assets/pause.png");
   ui['pause']['options']['template'] = "/modules/xaura-module/templates/pause.html";
