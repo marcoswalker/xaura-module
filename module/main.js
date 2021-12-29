@@ -65,6 +65,49 @@ Hooks.on('renderActorSheet', function(document, html) {
   if (game.settings.get('xaura-module', 'EscondeLogo')) {
     $('#ddbImporterButton').addClass('esconde');
   }
+  $(`<a class="convert-ouro" style="margin-left: 5px;" title="Converter moedas para Ouro."><i class="fas fa-coins"></i></a>`).insertAfter($(html.find('.currency-convert')));
+  $(html.find('.currency-convert')).css('display','none');
+  $(html.find('.convert-ouro')).click(function (event) {
+    let dialog = new Dialog({
+      title: "Converter moedas para Ouro",
+      content: `<p>Você deseja mesmo converter todas suas moedas para <strong>Ouro</strong>?</p><p>Essa operação não tem volta!</p>`,
+      buttons: {
+        sim: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Sim",
+          callback: html => {
+            const actor = document.actor;
+
+            let sobra_cobre = actor.data.data.currency.cp % 100;
+            let ouro_cobre = Math.floor(actor.data.data.currency.cp / 100); // Cobre
+
+            let sobra_prata = actor.data.data.currency.sp % 10;
+            let ouro_prata = Math.floor(actor.data.data.currency.sp / 10); // Prata
+
+            let sobra_elektro = actor.data.data.currency.ep % 2;
+            let ouro_elektro = Math.floor(actor.data.data.currency.ep / 2); // Elektro
+
+            let ouro_platina = actor.data.data.currency.pp * 10; // Platina
+
+            let novo_ouro = actor.data.data.currency.gp + ouro_cobre + ouro_prata + ouro_elektro + ouro_platina; // Ouro total
+            actor.update({
+              'data.currency.cp': sobra_cobre,
+              'data.currency.ep': sobra_elektro,
+              'data.currency.gp': novo_ouro,
+              'data.currency.pp': 0,
+              'data.currency.sp': sobra_prata
+            });            
+          }
+        },
+        nao: {
+          icon: '<i class="fas fa-times"></i>',
+          label: "Não",
+          callback: () => {}
+        }
+      },
+      default: "nao"
+    }).render(true);
+  });
 });
 
 Hooks.on('renderSidebar', function () {
