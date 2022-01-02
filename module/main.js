@@ -123,8 +123,8 @@ Hooks.once('diceSoNiceReady', function (dice) {
   if (game.user.data.name == "Daniel") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Guerreiro"}});
   if (game.user.data.name == "Vinicius") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Clerigo"}});
   if (game.user.data.name == "Xandão") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Bardo"}});
-  if (game.user.data.name.toLowerCase() == "marcelo") game.user.setFlag('dice-so-nice', 'appearance', { global: {"labelColor": "#000000","diceColor": "#422d15",
-    "outlineColor": "#ff0000", "edgeColor": "#422d15", "texture": "wood", "material": "wood", "font": "MagicSchool", "colorset": "custom", "system": "Feiticeiro"} });
+  if (game.user.data.name.toLowerCase() == "marcelo") game.user.setFlag('dice-so-nice', 'appearance', { global: { "labelColor": "#000000", "diceColor": "#330000",
+   "outlineColor": "#ff0000", "edgeColor": "#330000", "texture": "fire", "material": "wood", "font": "MagicSchool", "colorset": "custom", "system": "Feiticeiro" } });
   if (game.user.data.name == "Xaura") game.user.setFlag('dice-so-nice', 'appearance', { "global": {"labelColor": "#ff0000", "diceColor": "#000000",
     "outlineColor": "#ffffff", "edgeColor": "#ff0000", "texture": "metal", "material": "metal", "font": "MagicSchool", "colorset": "custom", "system": "Monge"} });
 });
