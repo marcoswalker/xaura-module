@@ -9,6 +9,7 @@ Hooks.once("init", function () {
   ptbr['path'] = "/modules/xaura-module/midi-lang/pt-BR.json";
   SystemSettings();
   game.audio.preload("/modules/xaura-module/assets/pause.wav");
+  game.audio.preload("/modules/xaura-module/assets/vo_anno_fight04.wav")
 });
 
 Hooks.once('ready', function () {
@@ -180,7 +181,10 @@ async function centralizaToken () {
 }
 
 Hooks.on("renderCombatTracker",function (combatTracker, html) {
-  if (!combatTracker.options.popOut && combatTracker.combats.length > 0) combatTracker.renderPopout();
+  if (combatTracker.combats.length > 0) {
+    if (!combatTracker.options.popOut) combatTracker.renderPopout();
+    if (combatTracker.combats[0].round == 1 && combatTracker.combats[0].turn == 0 && combatTracker.combats[0].started) game.audio.sounds.get("/modules/xaura-module/assets/vo_anno_fight04.wav").play({ volume:1.0, loop:false}, false);
+  }
   if (!game.user.isGM) return;
   const combats = combatTracker.combats;
   if (combats.length > 0) {
