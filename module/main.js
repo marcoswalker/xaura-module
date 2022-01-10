@@ -184,7 +184,7 @@ async function centralizaToken () {
 Hooks.on("renderCombatTracker",function (combatTracker, html) {
   if (combatTracker.combats.length > 0) {
     if (!combatTracker.options.popOut) combatTracker.renderPopout();
-    if (combatTracker.combats[0].round == 1 && combatTracker.combats[0].turn == 0 && combatTracker.combats[0].started) game.audio.sounds.get("/modules/xaura-module/assets/vo_anno_fight04.wav").play({ volume:1.0, loop:false}, false);
+    if (combatTracker.combats[0].round == 1 && combatTracker.combats[0].turn == 0 && combatTracker.combats[0].started) game.audio.sounds.get("/modules/xaura-module/assets/vo_anno_fight04.wav").play({ volume:0.8, loop:false}, false);
   }
   if (!game.user.isGM) return;
   const combats = combatTracker.combats;
