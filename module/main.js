@@ -127,8 +127,8 @@ Hooks.once('diceSoNiceReady', function (dice) {
   if (game.user.data.name == "João Pedro") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Ladino"}});
   if (game.user.data.name.toLowerCase() == "marcelo") game.user.setFlag('dice-so-nice', 'appearance', { global: { "labelColor": "#000000", "diceColor": "#230033",
    "outlineColor": "#ff0000", "edgeColor": "#230033", "texture": "fire", "material": "plastic", "font": "MagicSchool", "colorset": "custom", "system": "Feiticeiro" } });
-  if (game.user.data.name == "Xaura") game.user.setFlag('dice-so-nice', 'appearance', { "global": { "labelColor": "#ff0000", "diceColor": "#2e0000", "outlineColor": "#ffffff",
-   "edgeColor": "#240000", "texture": "skulls", "material": "plastic", "font": "MagicSchool", "colorset": "custom", "system": "Monge" } });
+  if (game.user.data.name == "Xaura") game.user.setFlag('dice-so-nice', 'appearance', { "global": { "labelColor": "#ff0000", "diceColor": "#000000", "outlineColor": "#ffffff", "edgeColor": "#ff0000",
+  "texture": "metal", "material": "metal", "font": "MagicSchool", "colorset": "custom", "system": "Monge" } });
 });
 
 Hooks.on('pauseGame', function (paused) {

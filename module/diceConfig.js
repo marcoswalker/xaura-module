@@ -6,6 +6,9 @@ export function diceConfig(dice) {
         '1',
         'modules/xaura-module/assets/logodice.png'
       ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/logodice_bump.png"
+      ],
       system: game.system.id
     });
     dice.addDicePreset({
@@ -17,6 +20,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/logodice.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/logodice_bump.png"
         ],
         system: game.system.id
     });
@@ -31,6 +37,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/logodice.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/logodice_bump.png"
         ],
         system: game.system.id
     });
@@ -47,6 +56,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/logodice.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/logodice_bump.png"
       ],
       system: game.system.id
     });
@@ -65,6 +77,9 @@ export function diceConfig(dice) {
           '10',
           '11',
           'modules/xaura-module/assets/logodice.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/logodice_bump.png"
         ],
         system: game.system.id
     });
@@ -92,6 +107,9 @@ export function diceConfig(dice) {
         '19',
         'modules/xaura-module/assets/logodice.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/logodice_bump.png"
+      ],
       system: game.system.id
     });
     dice.addSystem({ id: "Clerigo", name: "Clerigo"}, false);
@@ -100,6 +118,9 @@ export function diceConfig(dice) {
       labels: [
         '1',
         'modules/xaura-module/assets/Clerigodice.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/Clerigodice_bump.png"
       ],
       system: "Clerigo"
     });
@@ -112,6 +133,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/Clerigodice.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/Clerigodice_bump.png"
         ],
         system: "Clerigo"
     });
@@ -126,6 +150,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/Clerigodice.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/Clerigodice_bump.png"
         ],
         system: "Clerigo"
     });
@@ -142,6 +169,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/Clerigodice.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/Clerigodice_bump.png"
       ],
       system: "Clerigo"
     });
@@ -160,6 +190,9 @@ export function diceConfig(dice) {
           '10',
           '11',
           'modules/xaura-module/assets/Clerigodice.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/Clerigodice_bump.png"
         ],
         system: "Clerigo"
     });
@@ -187,6 +220,9 @@ export function diceConfig(dice) {
         '19',
         'modules/xaura-module/assets/Clerigodice.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/Clerigodice_bump.png"
+      ],
       system: "Clerigo"
     });
     dice.addSystem({ id: "Bardo", name: "Bardo"}, false);
@@ -195,6 +231,9 @@ export function diceConfig(dice) {
       labels: [
         '1',
         'modules/xaura-module/assets/Barddice.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/Barddice_bump.png"
       ],
       system: "Bardo"
     });
@@ -207,6 +246,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/Barddice.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/Barddice_bump.png"
         ],
         system: "Bardo"
     });
@@ -221,6 +263,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/Barddice.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/Barddice_bump.png"
         ],
         system: "Bardo"
     });
@@ -237,6 +282,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/Barddice.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/Barddice_bump.png"
       ],
       system: "Bardo"
     });
@@ -255,6 +303,9 @@ export function diceConfig(dice) {
           '10',
           '11',
           'modules/xaura-module/assets/Barddice.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/Barddice_bump.png"
         ],
         system: "Bardo"
     });
@@ -282,6 +333,9 @@ export function diceConfig(dice) {
         '19',
         'modules/xaura-module/assets/Barddice.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/Barddice_bump.png"
+      ],
       system: "Bardo"
     });
     dice.addSystem({ id: "Guerreiro", name: "Guerreiro"}, false);
@@ -290,6 +344,9 @@ export function diceConfig(dice) {
       labels: [
         '1',
         'modules/xaura-module/assets/Guerreirodice.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/Guerreirodice_bump.png"
       ],
       system: "Guerreiro"
     });
@@ -302,6 +359,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/Guerreirodice.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/Guerreirodice_bump.png"
         ],
         system: "Guerreiro"
     });
@@ -316,6 +376,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/Guerreirodice.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/Guerreirodice_bump.png"
         ],
         system: "Guerreiro"
     });
@@ -332,6 +395,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/Guerreirodice.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/Guerreirodice_bump.png"
       ],
       system: "Guerreiro"
     });
@@ -350,6 +416,9 @@ export function diceConfig(dice) {
           '10',
           '11',
           'modules/xaura-module/assets/Guerreirodice.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/Guerreirodice_bump.png"
         ],
         system: "Guerreiro"
     });
@@ -377,6 +446,9 @@ export function diceConfig(dice) {
         '19',
         'modules/xaura-module/assets/Guerreirodice.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/Guerreirodice_bump.png"
+      ],
       system: "Guerreiro"
     });
     //Bruxo
@@ -386,6 +458,9 @@ export function diceConfig(dice) {
       labels: [
         '1',
         'modules/xaura-module/assets/warlock.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/warlock_bump.png"
       ],
       system: "Bruxo"
     });
@@ -398,6 +473,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/warlock.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/warlock_bump.png"
         ],
         system: "Bruxo"
     });
@@ -412,6 +490,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/warlock.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/warlock_bump.png"
         ],
         system: "Bruxo"
     });
@@ -428,6 +509,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/warlock.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/warlock_bump.png"
       ],
       system: "Bruxo"
     });
@@ -446,6 +530,9 @@ export function diceConfig(dice) {
           '10',
           '11',
           'modules/xaura-module/assets/warlock.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/warlock_bump.png"
         ],
         system: "Bruxo"
     });
@@ -473,6 +560,9 @@ export function diceConfig(dice) {
         '19',
         'modules/xaura-module/assets/warlock.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/warlock_bump.png"
+      ],
       system: "Bruxo"
     });
     //
@@ -483,6 +573,9 @@ export function diceConfig(dice) {
       labels: [
         '1',
         'modules/xaura-module/assets/wizard.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/wizard_bump.png"
       ],
       system: "Feiticeiro"
     });
@@ -495,6 +588,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/wizard.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/wizard_bump.png"
         ],
         system: "Feiticeiro"
     });
@@ -509,6 +605,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/wizard.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/wizard_bump.png"
         ],
         system: "Feiticeiro"
     });
@@ -525,6 +624,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/wizard.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/wizard_bump.png"
       ],
       system: "Feiticeiro"
     });
@@ -543,6 +645,9 @@ export function diceConfig(dice) {
           '10',
           '11',
           'modules/xaura-module/assets/wizard.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/wizard_bump.png"
         ],
         system: "Feiticeiro"
     });
@@ -570,6 +675,9 @@ export function diceConfig(dice) {
         '19',
         'modules/xaura-module/assets/wizard.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/wizard_bump.png"
+      ],
       system: "Feiticeiro"
     });
     // Ladino
@@ -579,6 +687,9 @@ export function diceConfig(dice) {
       labels: [
         '1',
         'modules/xaura-module/assets/Ladino.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/Ladino_bump.png"
       ],
       system: "Ladino"
     });
@@ -591,6 +702,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/Ladino.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/Ladino_bump.png"
         ],
         system: "Ladino"
     });
@@ -605,6 +719,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/Ladino.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/Ladino_bump.png"
         ],
         system: "Ladino"
     });
@@ -621,6 +738,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/Ladino.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/Ladino_bump.png"
       ],
       system: "Ladino"
     });
@@ -639,6 +759,9 @@ export function diceConfig(dice) {
           '10',
           '11',
           'modules/xaura-module/assets/Ladino.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/Ladino_bump.png"
         ],
         system: "Ladino"
     });
@@ -666,6 +789,9 @@ export function diceConfig(dice) {
         '19',
         'modules/xaura-module/assets/Ladino.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/Ladino_bump.png"
+      ],
       system: "Ladino"
     });
     //
@@ -675,6 +801,9 @@ export function diceConfig(dice) {
       labels: [
         '1',
         'modules/xaura-module/assets/Mongedice.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/Mongedice_bump.png"
       ],
       system: "Monge"
     });
@@ -687,6 +816,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/Mongedice.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/Mongedice_bump.png"
         ],
         system: "Monge"
     });
@@ -701,6 +833,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/Mongedice.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/Mongedice_bump.png"
         ],
         system: "Monge"
     });
@@ -717,6 +852,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/Mongedice.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/Mongedice_bump.png"
       ],
       system: "Monge"
     });
@@ -735,6 +873,9 @@ export function diceConfig(dice) {
           '10',
           '11',
           'modules/xaura-module/assets/Mongedice.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/Mongedice_bump.png"
         ],
         system: "Monge"
     });
@@ -762,6 +903,9 @@ export function diceConfig(dice) {
         '19',
         'modules/xaura-module/assets/Mongedice.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/Mongedice_bump.png"
+      ],
       system: "Monge"
     });
     dice.addSystem({ id: "PactOfDragons", name: "Pact Of Dragons"}, false);
@@ -770,6 +914,9 @@ export function diceConfig(dice) {
       labels: [
         '1',
         'modules/xaura-module/assets/PODdice.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/PODdice_bump.png"
       ],
       system: "PactOfDragons"
     });
@@ -782,6 +929,9 @@ export function diceConfig(dice) {
           '4',
           '5',
           'modules/xaura-module/assets/PODdice.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/PODdice_bump.png"
         ],
         system: "PactOfDragons"
     });
@@ -796,6 +946,9 @@ export function diceConfig(dice) {
           '6',
           '7',
           'modules/xaura-module/assets/PODdice.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/PODdice_bump.png"
         ],
         system: "PactOfDragons"
     });
@@ -812,6 +965,9 @@ export function diceConfig(dice) {
         '8',
         '9',
         'modules/xaura-module/assets/PODdice.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/PODdice_bump.png"
       ],
       system: "PactOfDragons"
     });
@@ -831,32 +987,20 @@ export function diceConfig(dice) {
           '11',
           'modules/xaura-module/assets/PODdice.png',
         ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/PODdice_bump.png"
+        ], 
         system: "PactOfDragons"
     });
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
         'modules/xaura-module/assets/PODdice.png',
       ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/PODdice_bump.png"
+      ],    
       system: "PactOfDragons"
     });
     dice.addColorset({
