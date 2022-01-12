@@ -572,15 +572,15 @@ export function diceConfig(dice) {
       ],
       system: "Feiticeiro"
     });
-    // Barbaro
-    dice.addSystem({ id: "Barbaro", name: "Barbaro"}, false);
+    // Ladino
+    dice.addSystem({ id: "Ladino", name: "Ladino"}, false);
     dice.addDicePreset({
       type: 'd2',
       labels: [
         '1',
-        'modules/xaura-module/assets/Barbaro.png'
+        'modules/xaura-module/assets/Ladino.png'
       ],
-      system: "Barbaro"
+      system: "Ladino"
     });
     dice.addDicePreset({
         type: 'd6',
@@ -590,9 +590,9 @@ export function diceConfig(dice) {
           '3',
           '4',
           '5',
-          'modules/xaura-module/assets/Barbaro.png'
+          'modules/xaura-module/assets/Ladino.png'
         ],
-        system: "Barbaro"
+        system: "Ladino"
     });
     dice.addDicePreset({
         type: 'd8',
@@ -604,9 +604,9 @@ export function diceConfig(dice) {
           '5',
           '6',
           '7',
-          'modules/xaura-module/assets/Barbaro.png'
+          'modules/xaura-module/assets/Ladino.png'
         ],
-        system: "Barbaro"
+        system: "Ladino"
     });
     dice.addDicePreset({
       type: 'd10',
@@ -620,9 +620,9 @@ export function diceConfig(dice) {
         '7',
         '8',
         '9',
-        'modules/xaura-module/assets/Barbaro.png'
+        'modules/xaura-module/assets/Ladino.png'
       ],
-      system: "Barbaro"
+      system: "Ladino"
     });
     dice.addDicePreset({
         type: 'd12',
@@ -638,9 +638,9 @@ export function diceConfig(dice) {
           '9',
           '10',
           '11',
-          'modules/xaura-module/assets/Barbaro.png',
+          'modules/xaura-module/assets/Ladino.png',
         ],
-        system: "Barbaro"
+        system: "Ladino"
     });
     dice.addDicePreset({
       type: 'd20',
@@ -664,9 +664,9 @@ export function diceConfig(dice) {
         '17',
         '18',
         '19',
-        'modules/xaura-module/assets/Barbaro.png',
+        'modules/xaura-module/assets/Ladino.png',
       ],
-      system: "Barbaro"
+      system: "Ladino"
     });
     //
     dice.addSystem({ id: "Monge", name: "Monge"}, false);
