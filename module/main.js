@@ -9,7 +9,7 @@ Hooks.once("init", function () {
   ptbr['path'] = "/modules/xaura-module/midi-lang/pt-BR.json";
   SystemSettings();
   game.audio.preload("/modules/xaura-module/assets/pause.wav");
-  game.audio.preload("/modules/xaura-module/assets/vo_anno_fight04.wav")
+  game.audio.preload("/modules/xaura-module/assets/vo_anno_fight04.wav");
 });
 
 Hooks.once('ready', function () {

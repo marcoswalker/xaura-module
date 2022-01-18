@@ -14,11 +14,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1', '2', '3', '4', '5',
           'modules/xaura-module/assets/logodice.png'
         ],
         bumpMaps: [,,,,,
@@ -29,13 +25,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7',
           'modules/xaura-module/assets/logodice.png'
         ],
         bumpMaps: [,,,,,,,
@@ -46,15 +36,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'modules/xaura-module/assets/logodice.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -65,17 +47,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
           'modules/xaura-module/assets/logodice.png',
         ],
         bumpMaps: [,,,,,,,,,,,
@@ -86,25 +58,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
         'modules/xaura-module/assets/logodice.png',
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
@@ -127,11 +81,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1', '2', '3', '4', '5',
           'modules/xaura-module/assets/Clerigodice.png'
         ],
         bumpMaps: [,,,,,
@@ -142,13 +92,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7',
           'modules/xaura-module/assets/Clerigodice.png'
         ],
         bumpMaps: [,,,,,,,
@@ -159,15 +103,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'modules/xaura-module/assets/Clerigodice.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -178,17 +114,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
           'modules/xaura-module/assets/Clerigodice.png',
         ],
         bumpMaps: [,,,,,,,,,,,
@@ -199,25 +125,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
         'modules/xaura-module/assets/Clerigodice.png',
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
@@ -240,11 +148,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1', '2', '3', '4', '5',
           'modules/xaura-module/assets/Barddice.png'
         ],
         bumpMaps: [,,,,,
@@ -255,13 +159,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7',
           'modules/xaura-module/assets/Barddice.png'
         ],
         bumpMaps: [,,,,,,,
@@ -272,15 +170,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'modules/xaura-module/assets/Barddice.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -291,17 +181,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
           'modules/xaura-module/assets/Barddice.png',
         ],
         bumpMaps: [,,,,,,,,,,,
@@ -312,25 +192,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
         'modules/xaura-module/assets/Barddice.png',
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
@@ -353,11 +215,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1', '2', '3', '4', '5',
           'modules/xaura-module/assets/Guerreirodice.png'
         ],
         bumpMaps: [,,,,,
@@ -368,13 +226,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7',
           'modules/xaura-module/assets/Guerreirodice.png'
         ],
         bumpMaps: [,,,,,,,
@@ -385,15 +237,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'modules/xaura-module/assets/Guerreirodice.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -404,17 +248,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
           'modules/xaura-module/assets/Guerreirodice.png',
         ],
         bumpMaps: [,,,,,,,,,,,
@@ -425,25 +259,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
         'modules/xaura-module/assets/Guerreirodice.png',
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
@@ -467,11 +283,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1', '2', '3', '4', '5',
           'modules/xaura-module/assets/warlock.png'
         ],
         bumpMaps: [,,,,,
@@ -482,13 +294,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7',
           'modules/xaura-module/assets/warlock.png'
         ],
         bumpMaps: [,,,,,,,
@@ -499,15 +305,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'modules/xaura-module/assets/warlock.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -518,17 +316,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
           'modules/xaura-module/assets/warlock.png',
         ],
         bumpMaps: [,,,,,,,,,,,
@@ -539,25 +327,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
         'modules/xaura-module/assets/warlock.png',
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
@@ -582,11 +352,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1', '2', '3', '4', '5',
           'modules/xaura-module/assets/wizard.png'
         ],
         bumpMaps: [,,,,,
@@ -597,13 +363,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7', 
           'modules/xaura-module/assets/wizard.png'
         ],
         bumpMaps: [,,,,,,,
@@ -614,15 +374,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'modules/xaura-module/assets/wizard.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -633,17 +385,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1',  '2',  '3',  '4',  '5',  '6',  '7',  '8',  '9',  '10',   '11',
           'modules/xaura-module/assets/wizard.png',
         ],
         bumpMaps: [,,,,,,,,,,,
@@ -654,25 +396,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
         'modules/xaura-module/assets/wizard.png',
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
@@ -696,11 +420,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1', '2', '3', '4', '5', 
           'modules/xaura-module/assets/Ladino.png'
         ],
         bumpMaps: [,,,,,
@@ -711,13 +431,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7', 
           'modules/xaura-module/assets/Ladino.png'
         ],
         bumpMaps: [,,,,,,,
@@ -728,15 +442,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'modules/xaura-module/assets/Ladino.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -747,17 +453,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
           'modules/xaura-module/assets/Ladino.png',
         ],
         bumpMaps: [,,,,,,,,,,,
@@ -768,25 +464,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
         'modules/xaura-module/assets/Ladino.png',
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
@@ -810,11 +488,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1',  '2',  '3',  '4',  '5',
           'modules/xaura-module/assets/Mongedice.png'
         ],
         bumpMaps: [,,,,,
@@ -825,13 +499,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7',
           'modules/xaura-module/assets/Mongedice.png'
         ],
         bumpMaps: [,,,,,,,
@@ -842,15 +510,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'modules/xaura-module/assets/Mongedice.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -861,17 +521,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
           'modules/xaura-module/assets/Mongedice.png',
         ],
         bumpMaps: [,,,,,,,,,,,
@@ -882,25 +532,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd20',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        '10',
-        '11',
-        '12',
-        '13',
-        '14',
-        '15',
-        '16',
-        '17',
-        '18',
-        '19',
+        '1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19',
         'modules/xaura-module/assets/Mongedice.png',
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
@@ -923,11 +555,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd6',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
+          '1', '2', '3', '4', '5',
           'modules/xaura-module/assets/PODdice.png'
         ],
         bumpMaps: [,,,,,
@@ -938,13 +566,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd8',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
+          '1', '2', '3', '4', '5', '6', '7',
           'modules/xaura-module/assets/PODdice.png'
         ],
         bumpMaps: [,,,,,,,
@@ -955,15 +577,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
       type: 'd10',
       labels: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
+        '1','2','3','4','5','6','7','8','9',
         'modules/xaura-module/assets/PODdice.png'
       ],
       bumpMaps: [,,,,,,,,,
@@ -974,17 +588,7 @@ export function diceConfig(dice) {
     dice.addDicePreset({
         type: 'd12',
         labels: [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-          '10',
-          '11',
+          '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
           'modules/xaura-module/assets/PODdice.png',
         ],
         bumpMaps: [,,,,,,,,,,,
