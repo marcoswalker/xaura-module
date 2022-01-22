@@ -121,16 +121,7 @@ Hooks.on('renderSidebar', function () {
 });
 
 Hooks.once('diceSoNiceReady', function (dice) {
-  diceConfig(dice);
-  if (game.user.data.name == "Pirata") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "PactOfDragons"}});
-  if (game.user.data.name == "Daniel") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Guerreiro"}});
-  if (game.user.data.name == "Vinicius") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Clerigo"}});
-  if (game.user.data.name == "Xandão") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Bardo"}});
-  if (game.user.data.name == "João Pedro") game.user.setFlag('dice-so-nice', 'appearance', { global: {system: "Ladino"}});
-  if (game.user.data.name.toLowerCase() == "marcelo") game.user.setFlag('dice-so-nice', 'appearance', { global: { "labelColor": "#000000","diceColor": "#2c0061","outlineColor": "#ff0000","edgeColor": "#000000",
-	"texture": "fire","material": "plastic","font": "MagicSchool","colorset": "custom","system": "FeitiBruxo" } });
-  if (game.user.data.name == "Xaura") game.user.setFlag('dice-so-nice', 'appearance', { "global": { "labelColor": "#ff0000", "diceColor": "#000000", "outlineColor": "#ffffff", "edgeColor": "#ff0000",
-  "texture": "metal", "material": "metal", "font": "MagicSchool", "colorset": "custom", "system": "Monge" } });
+  diceConfig(dice, game.user);
 });
 
 Hooks.on('pauseGame', function (paused) {

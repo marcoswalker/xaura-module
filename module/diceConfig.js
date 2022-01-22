@@ -1,4 +1,4 @@
-export function diceConfig(dice) {
+export function diceConfig(dice, user) {
     dice.addSystem({ id: game.system.id, name: "DnD5E"}, true);
     dice.addDicePreset({
       type: 'd2',
@@ -688,4 +688,107 @@ export function diceConfig(dice) {
       font: 'MagicSchool',
       default: true,
     });
+
+    // USER'S CONFIG
+
+    switch (user.data.name) {
+      case "Pirata":
+        user.setFlag('dice-so-nice', 'appearance', { 
+          global: {
+            system: "PactOfDragons"
+          }
+        });
+        break;
+      case "Daniel":
+        user.setFlag('dice-so-nice', 'appearance', { 
+          global: {
+            system: "Guerreiro"
+          }
+        });
+        break;
+      case "Vinicius":
+        user.setFlag('dice-so-nice', 'appearance', {
+          global: {
+            system: "Clerigo"
+          }
+        });
+        break;
+      case "Xandão":
+        user.setFlag('dice-so-nice', 'appearance', { 
+          global: {
+            system: "Bardo"
+          }
+        });
+        break;
+      case "João Pedro":
+        user.setFlag('dice-so-nice', 'appearance', { 
+          global: {
+            system: "Ladino"
+          }
+        });
+        break;
+      case "Marcelo":
+        user.setFlag('dice-so-nice', 'appearance', { 
+          global: { 
+            "labelColor": "#000000",
+            "diceColor": "#2c0061",
+            "outlineColor": "#ff0000",
+            "edgeColor": "#000000",
+	          "texture": "fire",
+            "material": "plastic",
+            "font": "MagicSchool",
+            "colorset": "custom",
+            "system": "FeitiBruxo" 
+          } 
+        });
+        break;
+      case "Xaura":
+        user.setFlag('dice-so-nice', 'appearance', { 
+          "global": { 
+            "labelColor": "#ff0000", 
+            "diceColor": "#000000", 
+            "outlineColor": "#ffffff", 
+            "edgeColor": "#ff0000",
+            "texture": "metal", 
+            "material": "metal", 
+            "font": "MagicSchool", 
+            "colorset": "custom", 
+            "system": "Monge" } 
+        });
+        user.setFlag('dice-so-nice', 'sfxList', [
+          {
+            "diceType": "d20",
+            "onResult": [
+                "20"
+            ],
+            "specialEffect": "PlayAnimationBright"
+          }
+        ]);
+        user.setFlag('dice-so-nice', 'settings', {
+          "enabled": true,
+          "showExtraDice": false,
+          "hideAfterRoll": true,
+          "timeBeforeHide": "4000",
+          "hideFX": "fadeOut",
+          "autoscale": true,
+          "scale": 75,
+          "speed": "1",
+          "shadowQuality": "high",
+          "bumpMapping": true,
+          "sounds": true,
+          "soundsSurface": "felt",
+          "soundsVolume": 0.5,
+          "canvasZIndex": "over",
+          "throwingForce": "strong",
+          "useHighDPI": true,
+          "showOthersSFX": true,
+          "muteSoundSecretRolls": false,
+          "enableFlavorColorset": true,
+          "rollingArea": false
+        });
+        break;
+      default:
+        break;
+    }
+
 }
