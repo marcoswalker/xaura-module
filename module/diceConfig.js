@@ -404,6 +404,74 @@ export function diceConfig(dice) {
       ],
       system: "Feiticeiro"
     });
+    // FeitiBruxo
+    dice.addSystem({ id: "FeitiBruxo", name: "FeitiBruxo"}, false);
+    dice.addDicePreset({
+      type: 'd2',
+      labels: [
+        '1',
+        'modules/xaura-module/assets/wizlock.png'
+      ],
+      bumpMaps: [,
+        "modules/xaura-module/assets/wizlock_bump.png"
+      ],
+      system: "FeitiBruxo"
+    });
+    dice.addDicePreset({
+        type: 'd6',
+        labels: [
+          '1', '2', '3', '4', '5',
+          'modules/xaura-module/assets/wizlock.png'
+        ],
+        bumpMaps: [,,,,,
+          "modules/xaura-module/assets/wizlock_bump.png"
+        ],
+        system: "FeitiBruxo"
+    });
+    dice.addDicePreset({
+        type: 'd8',
+        labels: [
+          '1', '2', '3', '4', '5', '6', '7', 
+          'modules/xaura-module/assets/wizlock.png'
+        ],
+        bumpMaps: [,,,,,,,
+          "modules/xaura-module/assets/wizlock_bump.png"
+        ],
+        system: "FeitiBruxo"
+    });
+    dice.addDicePreset({
+      type: 'd10',
+      labels: [
+        '1', '2', '3', '4', '5', '6', '7', '8', '9',
+        'modules/xaura-module/assets/wizlock.png'
+      ],
+      bumpMaps: [,,,,,,,,,
+        "modules/xaura-module/assets/wizlock_bump.png"
+      ],
+      system: "FeitiBruxo"
+    });
+    dice.addDicePreset({
+        type: 'd12',
+        labels: [
+          '1',  '2',  '3',  '4',  '5',  '6',  '7',  '8',  '9',  '10',   '11',
+          'modules/xaura-module/assets/wizlock.png',
+        ],
+        bumpMaps: [,,,,,,,,,,,
+          "modules/xaura-module/assets/wizlock_bump.png"
+        ],
+        system: "FeitiBruxo"
+    });
+    dice.addDicePreset({
+      type: 'd20',
+      labels: [
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
+        'modules/xaura-module/assets/wizlock.png',
+      ],
+      bumpMaps: [,,,,,,,,,,,,,,,,,,,
+        "modules/xaura-module/assets/wizlock_bump.png"
+      ],
+      system: "FeitiBruxo"
+    });
     // Ladino
     dice.addSystem({ id: "Ladino", name: "Ladino"}, false);
     dice.addDicePreset({
