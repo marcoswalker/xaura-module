@@ -2,7 +2,7 @@
     "name": "xaura-module",
     "title": "Módulo do Xaura",
     "description": "Melhorias do Xaura para DnD5E.",
-    "version": "1.3.4",
+    "version": "1.3.5",
     "minimumCoreVersion": "0.8.9",
     "compatibleCoreVersion": "9",
     "author": "Marcos Walker (Xaura)",
@@ -27,10 +27,10 @@
     ],
     "packs": [
         {
-            "name": "plantas-e-fungos",
-            "label": "Plantas e Fungos",
+            "name": "materiais-e-ingredientes",
+            "label": "Materiais e Ingredientes",
             "system": "dnd5e",
-            "path": "./packs/plantas-e-fungos.db",
+            "path": "./packs/materiais-e-ingredientes.db",
             "entity": "Item"
         }
     ],
