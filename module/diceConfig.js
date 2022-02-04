@@ -465,7 +465,7 @@ export function diceConfig(dice, user) {
       type: 'd20',
       labels: [
         '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
-        'modules/xaura-module/assets/wizlock.png',
+        'modules/xaura-module/assets/wizlock.png'
       ],
       bumpMaps: [,,,,,,,,,,,,,,,,,,,
         "modules/xaura-module/assets/wizlock_bump.png"
@@ -735,7 +735,7 @@ export function diceConfig(dice, user) {
             "outlineColor": "#ff0000",
             "edgeColor": "#000000",
 	          "texture": "fire",
-            "material": "plastic",
+            "material": "wood",
             "font": "MagicSchool",
             "colorset": "custom",
             "system": "FeitiBruxo" 
