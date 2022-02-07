@@ -33,6 +33,10 @@ Hooks.once('ready', function () {
       ocultos = false;
     }
   });  
+  if (!game.user.isGM) return;
+  if (game.settings.get('babele', 'directory') != "modules/xaura-module/babele-lang") {
+    game.settings.set('babele','directory', 'modules/xaura-module/babele-lang');
+  }
 });
 
 Hooks.on('renderPlayerList', function () {
