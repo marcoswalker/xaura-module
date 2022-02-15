@@ -2,7 +2,7 @@
     "name": "xaura-module",
     "title": "Módulo do Xaura",
     "description": "Melhorias do Xaura para DnD5E.",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "minimumCoreVersion": "0.8.9",
     "compatibleCoreVersion": "9",
     "author": "Marcos Walker (Xaura)",
