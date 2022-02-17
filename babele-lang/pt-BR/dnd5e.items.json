@@ -57,7 +57,7 @@
 			"description": "<p><span style=\"color: #191813; font-size: 13px;\">Este fluido pegajoso e adesivo inflama em contato com o ar. Com uma ação, você pode arremessar este frasco a até 6 metros de distância, quebrando-o com o impacto. Faça um ataque à distância contra uma criatura ou objeto, tratando o fogo alquímico como uma arma improvisada. Com um acerto, o alvo sofre 1d4 pontos de dano ígneo no início de cada um dos seus turnos, até encerrar o processo usando sua ação para realizar um teste de Destreza com CD 10 e, com um sucesso, extinguir as chamas.</span></p>"
 		},
 		{
-			"id": "Alchemist's supplies",
+			"id": "Alchemist's Supplies",
 			"name": "Suprimentos de Alquimista",
 			"description": "<p>Essas ferramentas especiais incluem os itens necessários para prosseguir um ofício ou comércio de alquimia.</p>\n<p>A proficiência em um conjunto de ferramentas de artesão permite adicionar seu bônus de proficiência a qualquer teste de habilidade que você fizer usando as ferramentas de seu ofício. Cada tipo de ferramenta de artesão exige uma proficiência separada.</p>"
 		},
