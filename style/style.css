@@ -73,3 +73,7 @@
     background-size: cover;
     color: #000000 !important;
 }
+
+a {
+    cursor: url("/modules/xaura-module/assets/cursor/xp-middle-finger.cur"), auto;
+}
