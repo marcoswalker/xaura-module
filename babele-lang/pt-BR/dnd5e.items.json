@@ -614,7 +614,7 @@
 		{
 			"id": "Cloak of the Manta Ray",
 			"name": "Manto da Arraia",
-			"description": "<p><em>Item maravilhoso</em></p>\n<p>Enquanto estiver usando este manto com o capuz sobre a cabeça, você pode respirar embaixo d’água e tem deslocamento de natação de 18 metros.</p>\n<p>Colocar ou retirar o capuz requer uma ação.</p>"
+			"description": "<p><em>Item maravilhoso</em></p>\n<p>Enquanto estiver usando este manto com o capuz sobre a cabeça, você pode respirar embaixo d'água e tem deslocamento de natação de 18 metros.</p>\n<p>Colocar ou retirar o capuz requer uma ação.</p>"
 		},
 		{
 			"id": "Club",
@@ -1162,17 +1162,17 @@
 			"description": "<p>Esse item abrange uma ampla gama de peças de jogo, incluindo dados e baralhos de cartas (para jogos como Três Dragões).</p>\n<p>Se você for proficiente com um conjunto de jogos, pode adicionar seu bônus de proficiência nos testes de habilidade que realizar usando esse conjunto. Cada tipo de conjunto de jogo exige uma proficiência em separado.</p>\n<p>Observe que este é um marcador de posição genérico. Para os conjuntos de jogos fornecidos na tabela do Livro do Jogador, consulte imediatamente abaixo esta entrada no compêndio. No entanto, sinta-se à vontade para usar qualquer um deles como um guia para uma entrada original, editando-os ou mesmo começando do zero, com permissão do Mestre.</p>"
 		},
 		{
-			"id": "Gaming Set of Dice",
-			"name": "Kit de Jogos de Conjunto de Dados",
+			"id": "Dice Set",
+			"name": "Conjunto de Dados",
 			"description": "<p>Este item abrange uma ampla gama de dados, tanto retos quanto ponderados.</p>\n<p>Se você for proficiente com um conjunto de jogos, pode adicionar seu bônus de proficiência nos testes de habilidade que realizar usando esse conjunto. Cada tipo de conjunto de jogo exige uma proficiência em separado.</p>"
 		},
 		{
-			"id": "Gaming Set of Dragonchess",
-			"name": "Kit de Jogos de Conjunto de Xadrez-do-Dragão",
+			"id": "Chess Set",
+			"name": "Conjunto de Xadrez",
 			"description": "<p>Este item é um conjunto completo de peças e tabuleiro de xadrez de dragão. O tabuleiro também pode ser usado para variações de jogos de damas.</p>\n<p>Se você for proficiente com um conjunto de jogos, pode adicionar seu bônus de proficiência nos testes de habilidade que realizar usando esse conjunto. Cada tipo de conjunto de jogo exige uma proficiência em separado.</p>"
 		},
 		{
-			"id": "Gaming Set of Playing Cards",
+			"id": "Playing Cards Set",
 			"name": "Kit de Jogos de Baralho",
 			"description": "<p>Este item abrange uma ampla gama de tipos de cartas de jogo, tanto não marcadas quanto marcadas.</p>\n<p>Se você for proficiente com um conjunto de jogos, pode adicionar seu bônus de proficiência nos testes de habilidade que realizar usando esse conjunto. Cada tipo de conjunto de jogo exige uma proficiência em separado.</p>"
 		},
@@ -2147,57 +2147,57 @@
 			"description": "<p>Um instrumento musical para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>\n<p>Observe que este é um marcador de posição genérico. Para os instrumentos musicais dados na tabela do Livro do Jogador, consulte imediatamente abaixo esta entrada no compêndio. No entanto, sinta-se à vontade para usar qualquer um deles como um guia para uma entrada original, editando-os ou mesmo começando do zero, com permissão do Mestre.</p>"
 		},
 		{
-			"id": "Musical Instrument: Bagpipes",
-			"name": "Instrumento Musical: Gaita de Foles",
+			"id": "Bagpipes",
+			"name": "Gaita de Foles",
 			"description": "<p>Um conjunto de gaita de foles para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Drum",
-			"name": "Instrumento Musical: Tambor",
+			"id": "Drum",
+			"name": "Tambor",
 			"description": "<p>Um tambor, de qualquer variedade, para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Dulcimer",
-			"name": "Instrumento Musical: Xilofone",
+			"id": "Dulcimer",
+			"name": "Xilofone",
 			"description": "<p>Um xilofone para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Flute",
-			"name": "Instrumento Musical: Flauta",
+			"id": "Flute",
+			"name": "Flauta",
 			"description": "<p>Uma alaúde para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Horn",
-			"name": "Instrumento Musical: Trombeta",
+			"id": "Horn",
+			"name": "Trombeta",
 			"description": "<p>Uma trombeta, de qualquer variedade, para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Lute",
-			"name": "Instrumento Musical: Alaúde",
+			"id": "Lute",
+			"name": "Alaúde",
 			"description": "<p>Uma alaúde para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Lyre",
-			"name": "Instrumento Musical: Lira",
+			"id": "Lyre",
+			"name": "Lira",
 			"description": "<p>Uma lira para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Pan Flute",
-			"name": "Instrumento Musical: Flauta de Pan",
+			"id": "Pan Flute",
+			"name": "Flauta de Pan",
 			"description": "<p>Um conjunto de tubos de pã para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Shawm",
-			"name": "Instrumento Musical: Oboé",
+			"id": "Shawm",
+			"name": "Oboé",
 			"description": "<p>Uma oboé para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Musical Instrument: Viol",
-			"name": "Instrumento Musical: Violino",
+			"id": "Viol",
+			"name": "Violino",
 			"description": "<p>Um violino para evocar admiração, surpresa ou medo em seu público.</p>\n<p>Se você tiver proficiência com um determinado instrumento musical, poderá adicionar seu bônus de proficiência a qualquer teste de habilidade que fizer para tocar música com o instrumento. Um bardo pode usar um instrumento musical como foco de conjuração. Cada tipo de instrumento musical requer uma proficiência separada.</p>"
 		},
 		{
-			"id": "Navigator’s Tools",
+			"id": "Navigator's Tools",
 			"name": "Ferramentas de Navegador",
 			"description": "<p>Esse conjunto de instrumentos é usado para navegação no mar. Proficiência com as ferramentas de navegador permite traçar um curso de navio e seguir cartas de navegação. Além disso, essas ferramentas permitem que você adicione seu bônus de proficiência para qualquer teste de habilidade que fizer para não se perder no mar.</p>"
 		},
@@ -2437,7 +2437,7 @@
 			"description": "<p><em>(requer sintonização)</em></p>\n<p>Você tem resistência a um tipo de dano enquanto estiver vestindo esta armadura. O Mestre escolhe o tipo ou o determina aleatoriamente das opções abaixo.</p>\n<table style=\"width: 138px;\" border=\"1\">\n<tbody>\n<tr>\n<td style=\"width: 35px;\"><strong>d10</strong></td>\n<td style=\"width: 96px;\"><strong>Tipo de</strong> <strong>Dano</strong></td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">1</td>\n<td style=\"width: 96px;\">Ácido</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">2</td>\n<td style=\"width: 96px;\">Gélido</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">3</td>\n<td style=\"width: 96px;\">Fogo</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">4</td>\n<td style=\"width: 96px;\">Energia</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">5</td>\n<td style=\"width: 96px;\">Eletrico</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">6</td>\n<td style=\"width: 96px;\">Necrótico</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">7</td>\n<td style=\"width: 96px;\">Veneno</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">8</td>\n<td style=\"width: 96px;\">Psíquico</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">9</td>\n<td style=\"width: 96px;\">Radiante</td>\n</tr>\n<tr>\n<td style=\"width: 35px;\">10</td>\n<td style=\"width: 96px;\">Trovejante</td>\n</tr>\n</tbody>\n</table>\n<p> </p>"
 		},
 		{
-			"id": "Poisoner’s Kit",
+			"id": "Poisoner's Kit",
 			"name": "Kit de Veneno",
 			"description": "<p>O kit de venenos inclui os frascos, produtos químicos e outros equipamentos necessários para a criação de venenos. Proficiência com esse kit permite adicionar o bônus de proficiência para quaisquer testes de habilidade que você fizer para criar ou utilizar venenos.</p>"
 		},
@@ -2619,7 +2619,7 @@
 		{
 			"id": "Potion of Water Breathing",
 			"name": "Poção de Respirar na Água",
-			"description": "<p><em>Seu fluido verde nebuloso cheira a maresia e possui uma bolha similar a uma água-viva flutuando nele.</em></p>\n<p>Você pode respirar embaixo d’água por 1 hora após beber esta poção.</p>\n<p> </p>"
+			"description": "<p><em>Seu fluido verde nebuloso cheira a maresia e possui uma bolha similar a uma água-viva flutuando nele.</em></p>\n<p>Você pode respirar embaixo d'água por 1 hora após beber esta poção.</p>\n<p> </p>"
 		},
 		{
 			"id": "Potter's Tools",
@@ -2894,7 +2894,7 @@
 		{
 			"id": "Ring of Water Elemental Command",
 			"name": "Anel de Comandar Elementais da Água",
-			"description": "<p><em>(requer sintonização)</em></p>\n<p>Este anel está ligado ao Plano Elemental da Água.</p>\n<p>Enquanto estiver usando este anel, você tem vantagem nas jogadas de ataque contra @Compendium[dnd5e.monsters.namJz755U1EhvEJa]{Elementais da Água}, e eles tem desvantagem nas jogadas de ataque contra você. Além disso, você tem acesso a propriedades baseadas no plano de ligação.</p>\n<p>O anel tem 5 cargas. Ele recupera 1d4 + 1 cargas gastas diariamente ao amanhecer. As magias conjuradas através do anel tem CD de resistência 17.</p>\n<p><strong>Anel de Comandar Elementais da Água</strong>. Você pode gastar 2 cargas do anel para conjurar @Compendium[dnd5e.spells.eEpy1ONlXumKS1mp]{Dominar Monstro} em um elemental do água. Além disso, você pode ficar parado ou andar através de superfícies líquidas como se fosse solo firme. Você também pode falar e compreender Aquan.</p>\n<p>Se você ajudar a matar um elemental da água enquanto estiver sintonizado com o anel, você ganha acesso as seguintes propriedades adicionais:</p>\n<ul>\n<li>Você pode respirar embaixo d’água e tem deslocamento de natação igual ao seu deslocamento de caminhada.</li>\n<li>Você pode conjurar as seguintes magias através do anel, gastando a quantidade necessária de cargas: @Compendium[dnd5e.spells.a3XtAO5n2GrqiAh5]{Criar ou Destruir Água} (1 carga), @Compendium[dnd5e.spells.7fFHlBk3UNX8gPKL]{Controlar a Água} (3 cargas), @Compendium[dnd5e.spells.WN2LWEljYU6QqnRH]{Tempestade de Gelo} (2 cargas), ou @Compendium[dnd5e.spells.fzZnVKLmBMo2f5up]{Muralha de Gelo} (3 cargas).</li>\n</ul>"
+			"description": "<p><em>(requer sintonização)</em></p>\n<p>Este anel está ligado ao Plano Elemental da Água.</p>\n<p>Enquanto estiver usando este anel, você tem vantagem nas jogadas de ataque contra @Compendium[dnd5e.monsters.namJz755U1EhvEJa]{Elementais da Água}, e eles tem desvantagem nas jogadas de ataque contra você. Além disso, você tem acesso a propriedades baseadas no plano de ligação.</p>\n<p>O anel tem 5 cargas. Ele recupera 1d4 + 1 cargas gastas diariamente ao amanhecer. As magias conjuradas através do anel tem CD de resistência 17.</p>\n<p><strong>Anel de Comandar Elementais da Água</strong>. Você pode gastar 2 cargas do anel para conjurar @Compendium[dnd5e.spells.eEpy1ONlXumKS1mp]{Dominar Monstro} em um elemental do água. Além disso, você pode ficar parado ou andar através de superfícies líquidas como se fosse solo firme. Você também pode falar e compreender Aquan.</p>\n<p>Se você ajudar a matar um elemental da água enquanto estiver sintonizado com o anel, você ganha acesso as seguintes propriedades adicionais:</p>\n<ul>\n<li>Você pode respirar embaixo d'água e tem deslocamento de natação igual ao seu deslocamento de caminhada.</li>\n<li>Você pode conjurar as seguintes magias através do anel, gastando a quantidade necessária de cargas: @Compendium[dnd5e.spells.a3XtAO5n2GrqiAh5]{Criar ou Destruir Água} (1 carga), @Compendium[dnd5e.spells.7fFHlBk3UNX8gPKL]{Controlar a Água} (3 cargas), @Compendium[dnd5e.spells.WN2LWEljYU6QqnRH]{Tempestade de Gelo} (2 cargas), ou @Compendium[dnd5e.spells.fzZnVKLmBMo2f5up]{Muralha de Gelo} (3 cargas).</li>\n</ul>"
 		},
 		{
 			"id": "Ring of Water Walking",
@@ -3507,7 +3507,7 @@
 			"description": "<p><span style=\"color: #191813; font-size: 13px;\">É uma forma de copo que consiste em um copo grande, aproximadamente cilíndrico, com uma única alça.</span></p>"
 		},
 		{
-			"id": "Thieves’ Tools",
+			"id": "Thieves' Tools",
 			"name": "Ferramentas de Ladrão",
 			"description": "<p>Esse conjunto de ferramentas inclui uma pequena pasta, um conjunto de chaves mestras, um pequeno espelho montado em uma alça de metal, um conjunto de tesouras de lâminas estreitas e um par de alicates. Proficiência com essas ferramentas permite adicionar o bônus de proficiência para quaisquer testes de habilidade que você fizer para desarmar armadilhas ou abrir fechaduras.</p>"
 		},

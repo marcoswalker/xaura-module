@@ -68,7 +68,7 @@
 		},
 		{
 			"id": "Bardic Inspiration",
-			"name": "Inspiração de Bardo",
+			"name": "Bardic Inspiration",
 			"description": "<p>Você pode inspirar os outros através de palavras animadoras ou música. Para tanto, você usa uma ação bônus no seu turno para escolher uma outra criatura, que não seja você mesmo, a até 18 metros de você que possa ouvi-lo. Essa criatura ganha um dado de Inspiração de Bardo, um d6. Uma vez, nos próximos 10 minutos, a criatura poderá rolar o dado e adicionar o valor rolado a um teste de atributo, jogada de ataque ou salvaguarda que ela fizer. A criatura pode esperar até rolar o d20 antes de decidir usar o dado de Inspiração de Bardo, mas deve decidir antes do Mestre dizer se a rolagem foi bem ou mal sucedida. Quando o dado de Inspiração de Bardo for rolado, ele é gasto. Uma criatura pode ter apenas um dado de Inspiração de Bardo por vez.</p>\n<p>Você pode usar essa característica um número de vezes igual ao seu modificador de Carisma (no mínimo uma vez).</p>\n<p>Você recupera todos os usos quando termina um descanso longo.</p>\n<p>Seu dado de Inspiração de Bardo muda quando você atinge certos níveis na classe. O dado se torna um d8 no 5° nível, um d10 no 10° nível e um d12 no 15° nível.</p>\n<p><em style=\"box-sizing: border-box; user-select: text; color: #191813; font-size: 13px;\">**Nota do Foundry: Observe que a outra fórmula é definida com o padrão básico de 1d6 e os usos limitados são definidos como o mínimo de 1. Além disso, a recuperação é configurada para um descanso longo (para níveis antes de @Compendium[dnd5e.classfeatures.3VDZGs5Ug3hIE322]{Fonte de Inspiração} ser adquirida). Ajuste manualmente conforme necessário.</em></p>"
 		},
 		{
