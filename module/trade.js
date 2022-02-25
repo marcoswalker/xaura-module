@@ -15,7 +15,7 @@ Hooks.on("renderActorSheet", function (sheet, html, character) {
 
 Hooks.on("ready", function () {
     game.socket.on('module.xaura-module', tradeData => {
-        recebeSocket(tradeData);
+        if (tradeData.type == "trade") recebeSocket(tradeData);
     });
 });
 
@@ -193,6 +193,7 @@ function mandaPertence (event) {
                             ui.notifications.warn("Você não pode enviar mais itens que você tem!");
                         } else if (quant == items.data.data.quantity) {
                             const tradeData = {
+                                type: "trade",
                                 itemc: items.data,
                                 currentActor: currentActor,
                                 targetActor: user.character.id,
@@ -202,13 +203,14 @@ function mandaPertence (event) {
                             actor.deleteEmbeddedDocuments("Item", [itemId]);//actor.deleteOwnedItem(itemId);
                         } else {
                             const tradeData = {
+                                type: "trade",
                                 itemc: items.data,
                                 currentActor: currentActor,
                                 targetActor: user.character.id,
                                 quant: quant
                             };
                             game.socket.emit('module.xaura-module', tradeData);
-                            actor.updateEmbeddedDocuments("Item", [{'_id': item._id, 'data.quantity': items.data.data.quantity - quant}])
+                            actor.updateEmbeddedDocuments("Item", [{'_id': item.data._id, 'data.quantity': items.data.data.quantity - quant}])
                         }
                     } else if (typeof(user) === 'undefined') {
                         ui.notifications.warn("Tem que ter outro jogador online!");
