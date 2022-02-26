@@ -16,35 +16,48 @@ function set_votation(event) {
         <input type="text" id="titulo" style="width: 250px;"/>
         <input type="button" id="adicionar" value="Adicionar"/>
         <ul id="lista" style="height: 400px; list-style-type: none;"></ul>
-        <input type="button" id="enviar" value="Enviar Pesquisa" style="width: 100%;"/>
     `;
     let dialog = new Dialog({
         title: "Votação",
         content: dialog_html,
-        buttons: {},
+        buttons: {
+            "enviar": {
+                label: "Enviar",
+                icon: '<i class="fas fa-check"></i>',
+                callback: html => {
+                    let checkeds = $("input[type='checkbox']:checked");
+                    let escolha = checkeds.length > 0 ? checkeds[0].value: false;
+                    const socketData = {
+                        type: "vote",
+                        user: game.user.name,
+                        titulos: titulos,
+                        escolha: escolha
+                    };
+                    if (escolha) {
+                        ChatMessage.create({
+                            user: game.user.id,
+                            content: `${game.user.name} vota por: ${titulos[escolha]}`
+                        });
+                    }
+                    game.socket.emit('module.xaura-module', socketData);
+                }
+            }
+        },
         render: html => {
             let titulo = $(html.find("#titulo"));
             let lista = $(html.find("#lista"));
-            $(html.find("#adicionar")).click(function () {
+            let addOption = function () {
                 lista.append(`<li><input class="check" type="checkbox" value="${titulos.length}"/>${titulo.val()}</li>`);
                 titulos.push(titulo.val());
                 titulo.val("");
                 $(html.find('.check')).change(function (event) {
                     $(html.find('.check')).not(event.currentTarget).prop('checked', false);
                 });
+            }
+            $(html.find("#adicionar")).click(addOption);
+            $(html.find("#titulo")).on("keypress", function (event) {
+                if (event.which === 13) addOption();
             }); 
-            $(html.find("#enviar")).click(function () {
-                let checkeds = $("input[type='checkbox']:checked");
-                let escolha = checkeds.length > 0 ? checkeds[0].value: false;
-                const socketData = {
-                    type: "vote",
-                    user: game.user.name,
-                    titulos: titulos,
-                    escolha: escolha
-                };
-                console.log(socketData);
-                game.socket.emit('module.xaura-module', socketData);
-            });
         }
     }).render(true);
 }
@@ -56,5 +69,31 @@ Hooks.on("ready", function () {
 });
 
 function recebeSocket(socketData) {
-    console.log(socketData);
+    let dialog_html = `
+    <ul style="list-style-type: none; height: 400px;" id="lista"></ul>`;
+    let dialog = new Dialog({
+        title: `Votação iniciado por ${socketData.user}`,
+        content: dialog_html,
+        buttons: {
+            "enviar": {
+                label: "Enviar",
+                icon: '<i class="fas fa-check"></i>',
+                callback: html => {
+                    let checkeds = $("input[type='checkbox']:checked");
+                    ChatMessage.create({
+                        user: game.user.id,
+                        content: `${game.user.name} vota por: ${checkeds[0].value}`
+                    });
+                }
+            }
+        },
+        render: html => {
+            for (let titulo of socketData.titulos) {
+                $(html.find("#lista")).append(`<li><input type="checkbox" class="check" value="${titulo}">${titulo}</li>`);
+            }
+            $(html.find('.check')).change(function (event) {
+                $(html.find('.check')).not(event.currentTarget).prop('checked', false);
+            });
+        }
+    }).render(true);
 }
