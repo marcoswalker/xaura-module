@@ -97,8 +97,8 @@ function recebeVote(socketData) {
         }
         for (let title of votacoes.titulos) {
             html_chat += `<p>${title}</p>
-            <div class="container" style="width: 100%; background-color: #ddd;">
-              <div class="skills" style="text-align: right; padding-top: 10px; padding-bottom: 10px; color: white;width: ${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%; background-color: ${colors[votacoes.titulos.indexOf(title)]};">${votacoes.votes[votacoes.titulos.indexOf(title)]} votos</div>
+            <div style="width: 100%; background-color: #ddd;">
+              <div style="text-align: right; padding-top: 10px; padding-bottom: 10px; color: white;width: ${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%; background-color: ${colors[votacoes.titulos.indexOf(title)]};">${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%</div>
             </div>`;
         }        
         ChatMessage.create({
@@ -116,7 +116,7 @@ function recebeVote(socketData) {
 function recebeSocket(socketData) {
     let dialog_html = `<ul style="list-style-type: none; height: 400px;" id="lista"></ul>`;
     let dialog = new Dialog({
-        title: `Votação iniciado por ${socketData.user}`,
+        title: `Votação iniciada por ${socketData.user}`,
         content: dialog_html,
         buttons: {
             "enviar": {
