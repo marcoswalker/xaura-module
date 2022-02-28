@@ -1,3 +1,9 @@
+let votacoes = {
+    escolhas: [],
+    titulos: [],
+    votes: []
+};
+
 Hooks.on("getSceneControlButtons", (controls) => {
     const bar = controls.find(c => c.name === "token");
     bar.tools.push({
@@ -11,6 +17,11 @@ Hooks.on("getSceneControlButtons", (controls) => {
 
 function set_votation(event) {
     let titulos = [];
+    votacoes = {
+        escolhas: [],
+        titulos: [],
+        votes: []
+    };
     const dialog_html = `
         <label for="titulo">Opção: </label>
         <input type="text" id="titulo" style="width: 250px;"/>
@@ -33,12 +44,8 @@ function set_votation(event) {
                         titulos: titulos,
                         escolha: escolha
                     };
-                    if (escolha) {
-                        ChatMessage.create({
-                            user: game.user.id,
-                            content: `${game.user.name} vota por: ${titulos[escolha]}`
-                        });
-                    }
+                    votacoes.escolhas.push({user: game.user.name, escolha: escolha});
+                    votacoes.titulos = titulos;
                     game.socket.emit('module.xaura-module', socketData);
                 }
             }
@@ -65,12 +72,49 @@ function set_votation(event) {
 Hooks.on("ready", function () {
     game.socket.on("module.xaura-module", socketData => {
        if (socketData.type == "vote") recebeSocket(socketData);
+       else if (socketData.type == "vote_send") recebeVote(socketData);
     });
 });
 
+function recebeVote(socketData) {
+    if (game.user.name != socketData.user_ini) return;
+    votacoes.escolhas.push({user: socketData.user, escolha: socketData.escolha});
+    if (votacoes.escolhas.length >= game.users.filter(u => u.active).length) {
+        // todos os votos computados
+        for (let titulo_id = 0; titulo_id < votacoes.titulos.length; titulo_id++) {
+            votacoes.votes[titulo_id] = 0;
+            for (let escolha of votacoes.escolhas) {
+                if (parseInt(escolha.escolha) == titulo_id) {
+                    votacoes.votes[titulo_id] += 1; 
+                } 
+            }    
+        }
+        let html_chat = "";
+        let colors = ["red", "purple", "lime", "yellow", "teal", "aqua", "chocolate", "darkcyan", "darkgoldenrod", "darkkhaki", "darksalmon", "deeppink", "dodgerblue"];
+        let soma_total = 0;
+        for (let vote of votacoes.votes) {
+            soma_total += vote;
+        }
+        for (let title of votacoes.titulos) {
+            html_chat += `<p>${title}</p>
+            <div class="container" style="width: 100%; background-color: #ddd;">
+              <div class="skills" style="text-align: right; padding-top: 10px; padding-bottom: 10px; color: white;width: ${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%; background-color: ${colors[votacoes.titulos.indexOf(title)]};">${votacoes.votes[votacoes.titulos.indexOf(title)]} votos</div>
+            </div>`;
+        }        
+        ChatMessage.create({
+            user: game.user.id,
+            content: html_chat
+        });
+        votacoes = {
+            escolhas: [],
+            titulos: [],
+            votes: []
+        };
+    }
+}
+
 function recebeSocket(socketData) {
-    let dialog_html = `
-    <ul style="list-style-type: none; height: 400px;" id="lista"></ul>`;
+    let dialog_html = `<ul style="list-style-type: none; height: 400px;" id="lista"></ul>`;
     let dialog = new Dialog({
         title: `Votação iniciado por ${socketData.user}`,
         content: dialog_html,
@@ -78,22 +122,27 @@ function recebeSocket(socketData) {
             "enviar": {
                 label: "Enviar",
                 icon: '<i class="fas fa-check"></i>',
-                callback: html => {
-                    let checkeds = $("input[type='checkbox']:checked");
-                    ChatMessage.create({
-                        user: game.user.id,
-                        content: `${game.user.name} vota por: ${checkeds[0].value}`
-                    });
-                }
+                callback: html => {}
             }
         },
         render: html => {
             for (let titulo of socketData.titulos) {
-                $(html.find("#lista")).append(`<li><input type="checkbox" class="check" value="${titulo}">${titulo}</li>`);
+                $(html.find("#lista")).append(`<li><input type="checkbox" class="check" value="${socketData.titulos.indexOf(titulo)}">${titulo}</li>`);
             }
             $(html.find('.check')).change(function (event) {
                 $(html.find('.check')).not(event.currentTarget).prop('checked', false);
             });
+        },
+        close: html => {
+            let checkeds = $("input[type='checkbox']:checked");
+            let escolha = checkeds.length > 0 ? checkeds[0].value : false;
+            let send_vote = {
+                type: "vote_send",
+                user: game.user.name,
+                user_ini: socketData.user,
+                escolha: escolha
+            };
+            game.socket.emit("module.xaura-module", send_vote);
         }
     }).render(true);
 }
