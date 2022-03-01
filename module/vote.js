@@ -84,9 +84,7 @@ function recebeVote(socketData) {
         for (let titulo_id = 0; titulo_id < votacoes.titulos.length; titulo_id++) {
             votacoes.votes[titulo_id] = 0;
             for (let escolha of votacoes.escolhas) {
-                if (parseInt(escolha.escolha) == titulo_id) {
-                    votacoes.votes[titulo_id] += 1; 
-                } 
+                if (parseInt(escolha.escolha) == titulo_id) votacoes.votes[titulo_id] += 1;  
             }    
         }
         let html_chat = "";
@@ -98,7 +96,7 @@ function recebeVote(socketData) {
         for (let title of votacoes.titulos) {
             html_chat += `<p>${title}</p>
             <div style="width: 100%; background-color: #ddd;">
-              <div style="text-align: right; padding-top: 10px; padding-bottom: 10px; color: white;width: ${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%; background-color: ${colors[votacoes.titulos.indexOf(title)]};">${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%</div>
+              <div style="text-align: right; padding-top: 10px; padding-bottom: 10px; color: white; height: 40px; width: ${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%; background-color: ${colors[votacoes.titulos.indexOf(title)]};">${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%</div>
             </div>`;
         }        
         ChatMessage.create({
