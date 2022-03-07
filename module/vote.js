@@ -96,7 +96,7 @@ function recebeVote(socketData) {
         for (let title of votacoes.titulos) {
             html_chat += `<p>${title}</p>
             <div style="width: 100%; height: 37px; background-color: #ddd;">
-              <div style="text-align: right; padding-top: 10px; padding-bottom: 10px; color: white; height: 100%; width: ${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%; background-color: ${colors[votacoes.titulos.indexOf(title)]};">${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%</div>
+              <div style="text-align: right; padding-top: 10px; padding-bottom: 10px; color: white; height: 100%; width: ${(votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100}%; background-color: ${colors[votacoes.titulos.indexOf(title)]};">${((votacoes.votes[votacoes.titulos.indexOf(title)] / soma_total) * 100).toFixed(1)}%</div>
             </div>`;
         }        
         ChatMessage.create({
