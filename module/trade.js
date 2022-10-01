@@ -26,7 +26,7 @@ function recebeSocket(tradeData) {
     if (tradeData.hasOwnProperty('money')) return recebeMoney(tradeData);
     const actor = game.actors.get(tradeData.currentActor);
     let itemquevai = tradeData.itemc;
-    itemquevai.data.quantity = tradeData.quant;
+    itemquevai.system.quantity = tradeData.quant;
     targetActor.createEmbeddedDocuments("Item", [itemquevai]);//targetActor.createOwnedItem(itemquevai);
     const chatData = {
         user: game.user.id,
@@ -34,9 +34,9 @@ function recebeSocket(tradeData) {
             actor: game.user.character
         })
     };
-    chatData.content = "<p><img src='"+ actor.img +"' style='float: left; margin-left: auto; margin-right: auto; width: 40%;border: 0px;' /><img src='modules/xaura-module/assets/pause.png' style='float: left;margin-top:25px; margin-left: auto; margin-right: auto; width: 20%;border: 0px;'/><img src='"+ targetActor.img +"' style='float: left; width: 40%; margin-left: auto; margin-right: auto;border: 0px;' /></p><p class='rola_desc' style='display: block;margin-left:auto;margin-right:auto;margin-top:60%;'>"+ "<b>" + actor.data.name + "</b> acaba de presentear <b>"+ targetActor.data.name +"</b> com <b>"+ String(tradeData.quant) +"</b> <b>"+ itemquevai.name +"</b>." +"</p>";
+    chatData.content = "<p><img src='"+ actor.img +"' style='float: left; margin-left: auto; margin-right: auto; width: 40%;border: 0px;' /><img src='modules/xaura-module/assets/pause.png' style='float: left;margin-top:25px; margin-left: auto; margin-right: auto; width: 20%;border: 0px;'/><img src='"+ targetActor.img +"' style='float: left; width: 40%; margin-left: auto; margin-right: auto;border: 0px;' /></p><p class='rola_desc' style='display: block;margin-left:auto;margin-right:auto;margin-top:60%;'>"+ "<b>" + actor.name + "</b> acaba de presentear <b>"+ targetActor.name +"</b> com <b>"+ String(tradeData.quant) +"</b> <b>"+ itemquevai.name +"</b>." +"</p>";
     ChatMessage.create(chatData);
-    ui.notifications.info("Você acaba de receber " + tradeData.quant + " " + itemquevai.name + " de " + actor.data.name);
+    ui.notifications.info("Você acaba de receber " + tradeData.quant + " " + itemquevai.name + " de " + actor.name);
 }
 
 function recebeMoney(tradeData) {
@@ -47,23 +47,23 @@ function recebeMoney(tradeData) {
     let change = '';
     switch (tradeData.money) {
         case "Platina":
-            userMoney = targetActor.data.data.currency.pp;
+            userMoney = targetActor.system.currency.pp;
             change = 'data.currency.pp';
             break;
         case "Ouro":
-            userMoney = targetActor.data.data.currency.gp;
+            userMoney = targetActor.system.currency.gp;
             change = 'data.currency.gp';
             break;
         case "Elektro":
-            userMoney = targetActor.data.data.currency.ep;
+            userMoney = targetActor.system.currency.ep;
             change = 'data.currency.ep';
             break;
         case "Prata":
-            userMoney = targetActor.data.data.currency.sp;
+            userMoney = targetActor.system.currency.sp;
             change = 'data.currency.sp';
             break;
         case "Cobre":
-            userMoney = targetActor.data.data.currency.cp;
+            userMoney = targetActor.system.currency.cp;
             change = 'data.currency.cp';
             break;
         default:
@@ -77,9 +77,9 @@ function recebeMoney(tradeData) {
             actor: game.user.character
         })
     };
-    chatData.content = "<p><img src='"+ actor.img +"' style='float: left; margin-left: auto; margin-right: auto; width: 40%;border: 0px;' /><img src='modules/xaura-module/assets/pause.png' style='float: left;margin-top:25px; margin-left: auto; margin-right: auto; width: 20%;border: 0px;'/><img src='"+ targetActor.img +"' style='float: left; width: 40%; margin-left: auto; margin-right: auto;border: 0px;' /></p><p class='rola_desc' style='display: block;margin-left:auto;margin-right:auto;margin-top:60%;'>"+ "<b>" + actor.data.name + "</b> acaba de presentear <b>"+ targetActor.data.name +"</b> com <b>"+ String(tradeData.quant) +"</b> <b>"+ tradeData.money +"s</b>." +"</p>";
+    chatData.content = "<p><img src='"+ actor.img +"' style='float: left; margin-left: auto; margin-right: auto; width: 40%;border: 0px;' /><img src='modules/xaura-module/assets/pause.png' style='float: left;margin-top:25px; margin-left: auto; margin-right: auto; width: 20%;border: 0px;'/><img src='"+ targetActor.img +"' style='float: left; width: 40%; margin-left: auto; margin-right: auto;border: 0px;' /></p><p class='rola_desc' style='display: block;margin-left:auto;margin-right:auto;margin-top:60%;'>"+ "<b>" + actor.name + "</b> acaba de presentear <b>"+ targetActor.name +"</b> com <b>"+ String(tradeData.quant) +"</b> <b>"+ tradeData.money +"s</b>." +"</p>";
     ChatMessage.create(chatData);
-    ui.notifications.info("Você acaba de receber " + tradeData.quant + " " + tradeData.money + "s de " + actor.data.name);
+    ui.notifications.info("Você acaba de receber " + tradeData.quant + " " + tradeData.money + "s de " + actor.name);
 }
 
 function mandaMoney(event) {
@@ -110,23 +110,23 @@ function mandaMoney(event) {
                         let userMoney = 0;
                         switch (moeda) {
                             case "Platina":
-                                userMoney = actor.data.data.currency.pp;
+                                userMoney = actor.system.currency.pp;
                                 change = 'data.currency.pp';
                                 break;
                             case "Ouro":
-                                userMoney = actor.data.data.currency.gp;
+                                userMoney = actor.system.currency.gp;
                                 change = 'data.currency.gp';
                                 break;
                             case "Elektro":
-                                userMoney = actor.data.data.currency.ep;
+                                userMoney = actor.system.currency.ep;
                                 change = 'data.currency.ep';
                                 break;
                             case "Prata":
-                                userMoney = actor.data.data.currency.sp;
+                                userMoney = actor.system.currency.sp;
                                 change = 'data.currency.sp';
                                 break;
                             case "Cobre":
-                                userMoney = actor.data.data.currency.cp;
+                                userMoney = actor.system.currency.cp;
                                 change = 'data.currency.cp';
                                 break;
                             default:
@@ -160,7 +160,7 @@ function mandaMoney(event) {
         default: "nao",
         render: html => {
             for (let user of users) {
-                if (user.active && user.character !== null && user !== game.user && !user.isGM) $('.users_names').append("<option value='"+user.id+"'>"+user.data.name+"</option>");
+                if (user.active && user.character !== null && user !== game.user && !user.isGM) $('.users_names').append("<option value='"+user.id+"'>"+user.name+"</option>");
             }
             for (let moeda of moedas) {
                 $(html.find('#moedaMoney')).append(`<option value="${moeda}">${moeda}</option>`);
@@ -174,7 +174,7 @@ function mandaPertence (event) {
     const currentActor = $(event.currentTarget).data("actorId");
     const itemId = $(event.currentTarget).data("itemId");
     const actor = game.actors.get(currentActor);
-    const item =  actor.data.items.get(itemId);
+    const item =  actor.items.get(itemId);
     const items = item.clone();
     const users = game.users;
 
@@ -189,12 +189,12 @@ function mandaPertence (event) {
                     let quant = parseInt($('.quant').val());
                     const user = game.users.get($('.users_names').val());
                     if (quant > 0 && typeof(user) !== 'undefined') {
-                        if (quant > item.data.data.quantity){
+                        if (quant > item.system.quantity){
                             ui.notifications.warn("Você não pode enviar mais itens que você tem!");
-                        } else if (quant == items.data.data.quantity) {
+                        } else if (quant == items.system.quant) {
                             const tradeData = {
                                 type: "trade",
-                                itemc: items.data,
+                                itemc: items,
                                 currentActor: currentActor,
                                 targetActor: user.character.id,
                                 quant: quant
@@ -204,13 +204,13 @@ function mandaPertence (event) {
                         } else {
                             const tradeData = {
                                 type: "trade",
-                                itemc: items.data,
+                                itemc: items,
                                 currentActor: currentActor,
                                 targetActor: user.character.id,
                                 quant: quant
                             };
                             game.socket.emit('module.xaura-module', tradeData);
-                            actor.updateEmbeddedDocuments("Item", [{'_id': item.data._id, 'data.quantity': items.data.data.quantity - quant}])
+                            actor.updateEmbeddedDocuments("Item", [{'_id': item.id, 'data.quantity': items.system.quantity - quant}])
                         }
                     } else if (typeof(user) === 'undefined') {
                         ui.notifications.warn("Tem que ter outro jogador online!");
@@ -226,7 +226,7 @@ function mandaPertence (event) {
         default: "nao",
         render: html => {
             for (let user of users) {
-                if (user.active && user.character !== null && user !== game.user && !user.isGM) $('.users_names').append("<option value='"+user.id+"'>"+user.data.name+"</option>");
+                if (user.active && user.character !== null && user !== game.user && !user.isGM) $('.users_names').append("<option value='"+user.id+"'>"+user.name+"</option>");
             }
         },
     });

@@ -1,49 +1,58 @@
 {
-    "name": "xaura-module",
-    "title": "Módulo do Xaura",
-    "description": "Melhorias do Xaura para DnD5E.",
-    "version": "1.5.4",
-    "minimumCoreVersion": "0.8.9",
-    "compatibleCoreVersion": "9",
-    "author": "Marcos Walker (Xaura)",
-    "authors": [
-		{
-			"name": "Marcos Walker",
-			"url": "https://github.com/marcoswalker"
-		}
-	],
-    "esmodules": [
-        "module/main.js",
-        "module/trade.js",
-        "module/vote.js"
-    ],
-    "scripts": [
-        
-    ],
-    "system": [
-        "dnd5e"
-    ],
-    "styles": [
-        "style/style.css"
-    ],
-    "packs": [
-        {
-            "name": "materiais-e-ingredientes",
-            "label": "Materiais e Ingredientes",
-            "system": "dnd5e",
-            "path": "./packs/materiais-e-ingredientes.db",
-            "entity": "Item"
-        },
-        {
-            "name": "receitas",
-            "label": "Receitas",
-            "system": "dnd5e",
-            "path": "./packs/receitas.db",
-            "entity": "JournalEntry"
-        }
-    ],
-    "socket": true,
-    "url": "https://github.com/marcoswalker/xaura-module",
-    "manifest": "https://raw.githubusercontent.com/marcoswalker/xaura-module/master/module.json",
-    "download": "https://codeload.github.com/marcoswalker/xaura-module/zip/master"
+  "title": "Módulo do Xaura",
+  "description": "Melhorias do Xaura para DnD5E.",
+  "version": "1.5.5",
+  "authors": [
+    {
+      "name": "Marcos Walker",
+      "url": "https://github.com/marcoswalker",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "module/main.js",
+    "module/trade.js",
+    "module/vote.js"
+  ],
+  "styles": [
+    "style/style.css"
+  ],
+  "packs": [
+    {
+      "name": "materiais-e-ingredientes",
+      "label": "Materiais e Ingredientes",
+      "system": "dnd5e",
+      "path": "packs/materiais-e-ingredientes.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "receitas",
+      "label": "Receitas",
+      "system": "dnd5e",
+      "path": "packs/receitas.db",
+      "type": "JournalEntry",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "socket": true,
+  "url": "https://github.com/marcoswalker/xaura-module",
+  "manifest": "https://raw.githubusercontent.com/marcoswalker/xaura-module/master/module.json",
+  "download": "https://codeload.github.com/marcoswalker/xaura-module/zip/master",
+  "id": "xaura-module",
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  }
 }

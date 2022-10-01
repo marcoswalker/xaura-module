@@ -3,21 +3,54 @@ import {SystemSettings} from "./settings.js";
 
 let ocultos = false;
 
-let fight = false;
+class XPause extends Application {
+  static get defaultOptions() {
+    const options = super.defaultOptions;
+    options.id = "pause";
+    options.template = "/modules/xaura-module/templates/pause.hbs";
+    options.popOut = false;
+    return options;
+  }
+
+  /** @override */
+  getData(options) {
+    return { paused: game.paused };
+  }
+}
 
 Hooks.once("init", function () { 
+
   const midiQOL = game.modules.get('midi-qol');
   let ptbr = midiQOL.languages.find(a => a.lang == "pt-BR");
   ptbr['path'] = "/modules/xaura-module/midi-lang/pt-BR.json";
   SystemSettings();
-  game.audio.preload("/modules/xaura-module/assets/pause.wav");
-  game.audio.preload("/modules/xaura-module/assets/vo_anno_fight04.wav");
+
+  CONFIG.ui.pause = XPause;
+
+  CONFIG.Combat.sounds = Object.assign({ 
+    xaura: {
+      label: "Xaura",
+      startEncounter: ["/modules/xaura-module/assets/combat/vo_anno_fight04.wav"],
+      yourTurn: [
+        "/modules/xaura-module/assets/combat/Bar_datewithdeath.wav",
+        "/modules/xaura-module/assets/combat/Bar_meetdeath.wav",
+        "/modules/xaura-module/assets/combat/Bar_pleasecontinue.wav"
+      ],
+      nextUp: [
+        "/modules/xaura-module/assets/combat/Nec_soonperhaps.wav",
+        "/modules/xaura-module/assets/combat/Nec_tellmemore.wav",
+        "/modules/xaura-module/assets/combat/Nec_letsgo.wav"
+      ]
+    }
+  }, CONFIG.Combat.sounds);
+
 });
 
 Hooks.once('ready', function () {
+  
+  
+  game.settings.set('core', 'combatTheme', 'xaura');
   $('#logo').attr('src', '/modules/xaura-module/assets/DD_TOP.png');
-  $('#pause img').attr('src', "/modules/xaura-module/assets/pause.png");
-  ui['pause']['options']['template'] = "/modules/xaura-module/templates/pause.html";
   $('#logo').click(function () {
     if (!ocultos) {
       $('#controls').addClass('esconde');
@@ -64,10 +97,10 @@ Hooks.on('renderSceneControls', function () {
 });
 
 Hooks.on('renderActorSheet', function(document, html) {
-  if (document.actor.data.type != "character") return;
+  if (document.actor.type != "character") return;
   if (game.settings.get('xaura-module', 'FundoFicha')) {
-    $(`#actor-${document.actor.id}`).addClass('fundoFicha');
-    $(`#actor-${document.actor.id} section`).css('background','none');
+    $(html).addClass('fundoFicha');
+    $(html.find('section')).css('background','none');
   }
   if (game.settings.get('xaura-module', 'EscondeLogo')) {
     $('#ddbImporterButton').addClass('esconde');
@@ -85,24 +118,24 @@ Hooks.on('renderActorSheet', function(document, html) {
           callback: html => {
             const actor = document.actor;
 
-            let sobra_cobre = actor.data.data.currency.cp % 100;
-            let ouro_cobre = Math.floor(actor.data.data.currency.cp / 100); // Cobre
+            let sobra_cobre = actor.system.currency.cp % 100;
+            let ouro_cobre = Math.floor(actor.system.currency.cp / 100); // Cobre
 
-            let sobra_prata = actor.data.data.currency.sp % 10;
-            let ouro_prata = Math.floor(actor.data.data.currency.sp / 10); // Prata
+            let sobra_prata = actor.system.currency.sp % 10;
+            let ouro_prata = Math.floor(actor.system.currency.sp / 10); // Prata
 
-            let sobra_elektro = actor.data.data.currency.ep % 2;
-            let ouro_elektro = Math.floor(actor.data.data.currency.ep / 2); // Elektro
+            let sobra_elektro = actor.system.currency.ep % 2;
+            let ouro_elektro = Math.floor(actor.system.currency.ep / 2); // Elektro
 
-            let ouro_platina = actor.data.data.currency.pp * 10; // Platina
+            let ouro_platina = actor.system.currency.pp * 10; // Platina
 
-            let novo_ouro = actor.data.data.currency.gp + ouro_cobre + ouro_prata + ouro_elektro + ouro_platina; // Ouro total
+            let novo_ouro = actor.system.currency.gp + ouro_cobre + ouro_prata + ouro_elektro + ouro_platina; // Ouro total
             actor.update({
-              'data.currency.cp': sobra_cobre,
-              'data.currency.ep': sobra_elektro,
-              'data.currency.gp': novo_ouro,
-              'data.currency.pp': 0,
-              'data.currency.sp': sobra_prata
+              'system.currency.cp': sobra_cobre,
+              'system.currency.ep': sobra_elektro,
+              'system.currency.gp': novo_ouro,
+              'system.currency.pp': 0,
+              'system.currency.sp': sobra_prata
             });            
           }
         },
@@ -128,8 +161,11 @@ Hooks.once('diceSoNiceReady', function (dice) {
   diceConfig(dice, game.user);
 });
 
-Hooks.on('pauseGame', function (paused) {
-  if (paused) game.audio.sounds.get("/modules/xaura-module/assets/pause.wav").play({ volume:1.0, loop:false}, false); // TypeError: Cannot read property 'play' of undefined (Arrumado para versão 9)
+Hooks.on('pauseGame',async function (paused) {
+  if (paused) {
+    let pauseSound = await game.audio.preload("/modules/xaura-module/assets/pause.wav");
+    pauseSound.play({ volume:1.0, loop:false}, false);
+  }
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {
@@ -181,11 +217,7 @@ async function centralizaToken () {
 Hooks.on("renderCombatTracker",function (combatTracker, html) {
   if (combatTracker.combats.length > 0) {
     if (!combatTracker.options.popOut) combatTracker.renderPopout();
-    if (combatTracker.combats[0].round == 1 && combatTracker.combats[0].turn == 0 && combatTracker.combats[0].started && !fight) {
-      game.audio.sounds.get("/modules/xaura-module/assets/vo_anno_fight04.wav").play({ volume:0.8, loop:false}, false);
-      fight = true;
-    }
-  } else fight = false;
+  } 
   if (!game.user.isGM) return;
   const combats = combatTracker.combats;
   if (combats.length > 0) {

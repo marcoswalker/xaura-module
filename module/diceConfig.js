@@ -759,7 +759,7 @@ export function diceConfig(dice, user) {
 
     // USER'S CONFIG
 
-    switch (user.data.name) {
+    switch (user.name) {
       case "Pirata":
         user.setFlag('dice-so-nice', 'appearance', { 
           global: {
