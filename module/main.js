@@ -221,12 +221,10 @@ Hooks.on("renderCombatTracker",function (combatTracker, html) {
   if (!game.user.isGM) return;
   const combats = combatTracker.combats;
   if (combats.length > 0) {
-    let header = html.find("#combat-round");
-    header.append(`<nav class="encounters flexrow">
-      <a class="combat-control setarIniciativa" title="Somar Iniciativa para vários combatentes.">
+    let header = html.find("div[class='encounter-controls flexrow combat']");
+    header.append(`<a class="combat-button setarIniciativa" title="Somar Iniciativa para vários combatentes.">
       <i class="fas fa-exchange-alt"></i>
-      </a>
-    </nav>`);
+      </a>`);
     let currentCombat = combatTracker.viewed;
     let combatants = currentCombat.combatants;
     $('.setarIniciativa').on('click', function (event) {
